@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Users/rongzhou/Downloads/ParseDemo/ParseDemo/HomeViewController.swift",
+  "offset": 1003,
+  "remove": 512,
+  "text": "\n                self.presentViewController(viewController, animated: true, completion: nil)\n            })\n        }\n    }\n    \n    @IBAction func logOutAction(sender: AnyObject){\n        \n        // Send a request to log out a user\n        PFUser.logOut()\n        \n        dispatch_async(dispatch_get_main_queue(), { () -> Void in\n            let viewController:UIViewController = UIStoryboard(name: \"Main\", bundle: nil).instantiateViewControllerWithIdentifier(\"Login\") ",
+ }
+]

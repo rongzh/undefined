@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "ed997aa8f21e4f10f56c40d699c1dd89"
+build_time: [499568675, 115497000]
+inputs:
+  "/Users/rongzhou/Downloads/ParseDemo/ParseDemoTests/ParseDemoTests.swift": [491389395, 0]
