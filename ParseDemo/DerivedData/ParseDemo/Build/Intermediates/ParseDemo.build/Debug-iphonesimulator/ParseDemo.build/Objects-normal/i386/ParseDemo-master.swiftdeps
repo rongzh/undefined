@@ -1,0 +1,9 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "4a07f72e205aede7ad298ee31189dad8"
+build_time: [500098265, 674861000]
+inputs:
+  "/Users/rongzhou/Desktop/undefined/ParseDemo/ParseDemo/HomeViewController.swift": [499575237, 0]
+  "/Users/rongzhou/Desktop/undefined/ParseDemo/ParseDemo/LoginViewController.swift": [499575237, 0]
+  "/Users/rongzhou/Desktop/undefined/ParseDemo/ParseDemo/SignUpViewController.swift": [499575237, 0]
+  "/Users/rongzhou/Desktop/undefined/ParseDemo/ParseDemo/AppDelegate.swift": [499575237, 0]
+  "/Users/rongzhou/Desktop/undefined/ParseDemo/ParseDemo/ResetPasswordViewController.swift": [499575237, 0]

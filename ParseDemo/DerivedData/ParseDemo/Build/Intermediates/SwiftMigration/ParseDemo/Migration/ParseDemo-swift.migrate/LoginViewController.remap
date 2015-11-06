@@ -1,8 +1,0 @@
-[
- {
-  "file": "/Users/rongzhou/Downloads/ParseDemo/ParseDemo/LoginViewController.swift",
-  "offset": 1275,
-  "remove": 243,
-  "text": "username.characters.count < 5 {\n            var alert = UIAlertView(title: \"Invalid\", message: \"Username must be greater than 5 characters\", delegate: self, cancelButtonTitle: \"OK\")\n            alert.show()\n            \n        } else if password.characters.count",
- }
-]

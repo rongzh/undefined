@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -253,14 +253,14 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="4vZ-4h-wAp"/>
-                                        <exclude reference="6dF-FN-4Ak"/>
-                                        <exclude reference="VvG-Ii-9VC"/>
                                         <exclude reference="Hps-kG-uB5"/>
                                         <exclude reference="adg-aL-Cfo"/>
                                         <exclude reference="iwE-3s-WAH"/>
                                         <exclude reference="ob8-vP-Wcv"/>
                                         <exclude reference="tBM-1K-ctT"/>
+                                        <exclude reference="4vZ-4h-wAp"/>
+                                        <exclude reference="6dF-FN-4Ak"/>
+                                        <exclude reference="VvG-Ii-9VC"/>
                                         <exclude reference="B4D-3c-sd8"/>
                                         <exclude reference="AaM-Ow-RSs"/>
                                         <exclude reference="oZv-0C-eyi"/>
@@ -425,6 +425,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="08v-Fn-XCa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mn3-tI-dz0">
                                 <rect key="frame" x="165" y="127" width="270" height="346"/>
                                 <subviews>
