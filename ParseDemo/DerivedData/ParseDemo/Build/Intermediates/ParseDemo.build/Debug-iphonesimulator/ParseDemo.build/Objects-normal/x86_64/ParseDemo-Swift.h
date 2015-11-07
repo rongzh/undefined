@@ -91,6 +91,31 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@class UISearchBar;
+@class UILabel;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC9ParseDemo23AddFriendViewController")
+@interface AddFriendViewController : UIViewController <UIBarPositioningDelegate, UITableViewDelegate, UIScrollViewDelegate, UISearchBarDelegate, UITableViewDataSource>
+@property (nonatomic, weak) IBOutlet UITableView * __null_unspecified myTable;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified userNameLabel;
+@property (nonatomic, weak) IBOutlet UISearchBar * __null_unspecified mySearchBar;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)searchBarSearchButtonClicked:(UISearchBar * __nonnull)searchBar;
+- (void)searchBarCancelButtonClicked:(UISearchBar * __nonnull)searchBar;
+- (IBAction)refreshButtonTapped:(id __nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIApplication;
 @class NSObject;
@@ -107,9 +132,16 @@ SWIFT_CLASS("_TtC9ParseDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
-@class NSBundle;
-@class NSCoder;
+
+SWIFT_CLASS("_TtC9ParseDemo20FriendViewController")
+@interface FriendViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified userNameLabel;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC9ParseDemo18HomeViewController")
 @interface HomeViewController : UIViewController

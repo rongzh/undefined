@@ -56,16 +56,9 @@ class SignUpViewController: UIViewController {
             newUser.password = password
             newUser.email = finalEmail
             
-            
             let newUsers = PFObject(className: "Users")
             newUsers.setObject(username!, forKey: "username")
-            
-           
-            
-            // Sign up the user asynchronously
             newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-                
-                // Stop the spinner
                 spinner.stopAnimating()
                 if ((error) != nil) {
                     let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
