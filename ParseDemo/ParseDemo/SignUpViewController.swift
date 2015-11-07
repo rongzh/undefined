@@ -56,6 +56,12 @@ class SignUpViewController: UIViewController {
             newUser.password = password
             newUser.email = finalEmail
             
+            
+            let newUsers = PFObject(className: "Users")
+            newUsers.setObject(username!, forKey: "username")
+            
+           
+            
             // Sign up the user asynchronously
             newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
                 
@@ -66,6 +72,11 @@ class SignUpViewController: UIViewController {
                     alert.show()
                     
                 } else {
+                    newUsers.saveInBackgroundWithBlock{
+                        (success: Bool, error: NSError?) -> Void in
+                        
+                    }
+                
                     let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in

@@ -46,7 +46,7 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
     func searchBarSearchButtonClicked(searchBar: UISearchBar){
         mySearchBar.resignFirstResponder()
         
-        var nameQuery = PFQuery(className: "User")
+        var nameQuery = PFQuery(className: "Users")
         nameQuery.whereKey("username",containsString:searchBar.text)
         
         var query = PFQuery.orQueryWithSubqueries([nameQuery])
