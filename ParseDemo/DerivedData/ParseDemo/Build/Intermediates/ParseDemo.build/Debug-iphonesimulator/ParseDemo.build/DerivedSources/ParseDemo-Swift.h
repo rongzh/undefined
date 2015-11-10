@@ -132,6 +132,31 @@ SWIFT_CLASS("_TtC9ParseDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
+@class UIImageView;
+
+SWIFT_CLASS("_TtC9ParseDemo18CardViewController")
+@interface CardViewController : UIViewController
+@property (nonatomic, strong) UIView * __null_unspecified cardView;
+@property (nonatomic, strong) UIImageView * __null_unspecified back;
+@property (nonatomic, strong) UIImageView * __null_unspecified front;
+@property (nonatomic) BOOL showingBack;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)tapped;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9ParseDemo23DashBoardViewController")
+@interface DashBoardViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC9ParseDemo20FriendViewController")
 @interface FriendViewController : UIViewController

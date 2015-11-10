@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6B05DF1BF1A5D700661D46 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */; };
+		5B6B05E11BF1AA5900661D46 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B05E01BF1AA5900661D46 /* CardViewController.swift */; };
 		5B7524691BE450A200C96BCF /* parse-library-1.9.1 in Resources */ = {isa = PBXBuildFile; fileRef = 5B7524681BE450A200C96BCF /* parse-library-1.9.1 */; };
 		5B75246B1BE4513A00C96BCF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B75246A1BE4513A00C96BCF /* libz.tbd */; };
 		5B75246D1BE4514300C96BCF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B75246C1BE4514300C96BCF /* libsqlite3.tbd */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		5B6B05E01BF1AA5900661D46 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		5B7524681BE450A200C96BCF /* parse-library-1.9.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.9.1"; sourceTree = "<group>"; };
 		5B75246A1BE4513A00C96BCF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5B75246C1BE4514300C96BCF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -136,8 +140,10 @@
 				E023470E1B677CD3004F2DBE /* AppDelegate.swift */,
 				E02347121B677CD3004F2DBE /* Main.storyboard */,
 				E023475F1B6BE423004F2DBE /* LoginViewController.swift */,
+				5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */,
 				E023475D1B6BE32A004F2DBE /* HomeViewController.swift */,
 				E02347531B6A50F6004F2DBE /* SignUpViewController.swift */,
+				5B6B05E01BF1AA5900661D46 /* CardViewController.swift */,
 				ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */,
 				ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */,
 				E02347571B6BE242004F2DBE /* ResetPasswordViewController.swift */,
@@ -302,8 +308,10 @@
 				E02347601B6BE423004F2DBE /* LoginViewController.swift in Sources */,
 				E02347581B6BE242004F2DBE /* ResetPasswordViewController.swift in Sources */,
 				E02347541B6A50F6004F2DBE /* SignUpViewController.swift in Sources */,
+				5B6B05E11BF1AA5900661D46 /* CardViewController.swift in Sources */,
 				E023470F1B677CD3004F2DBE /* AppDelegate.swift in Sources */,
 				E023475E1B6BE32A004F2DBE /* HomeViewController.swift in Sources */,
+				5B6B05DF1BF1A5D700661D46 /* DashBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

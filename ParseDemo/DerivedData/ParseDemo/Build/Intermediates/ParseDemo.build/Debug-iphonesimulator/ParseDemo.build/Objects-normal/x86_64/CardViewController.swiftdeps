@@ -1,0 +1,593 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CardViewController"
+provides-nominal:
+- "C9ParseDemo18CardViewController"
+provides-member:
+- ["C9ParseDemo18CardViewController", ""]
+provides-dynamic-lookup:
+- "front"
+- "back"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "cardView"
+- "showingBack"
+- "tapped"
+depends-top-level:
+- "UIViewController"
+- !private "CGRectMake"
+- "CardViewController"
+- !private "UIImage"
+- !private "StringLiteralType"
+- "UIImageView"
+- !private "Selector"
+- "UIView"
+- !private "UIViewAnimationOptions"
+- "BooleanLiteralType"
+- !private "UITapGestureRecognizer"
+depends-member:
+- !private ["PSs9AnyObject", "CGRectMake"]
+- !private ["PSs9AnyObject", "Selector"]
+- !private ["PSs9AnyObject", "UIImage"]
+- !private ["PSs9AnyObject", "UIImageView"]
+- !private ["PSs9AnyObject", "UITapGestureRecognizer"]
+- !private ["PSs9AnyObject", "UIView"]
+- !private ["PSs9AnyObject", "UIViewAnimationOptions"]
+- !private ["PSs9AnyObject", "addGestureRecognizer"]
+- !private ["PSs9AnyObject", "addSubview"]
+- ["PSs9AnyObject", "back"]
+- ["PSs9AnyObject", "cardView"]
+- ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- !private ["PSs9AnyObject", "frame"]
+- ["PSs9AnyObject", "front"]
+- !private ["PSs9AnyObject", "image"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "numberOfTapsRequired"]
+- ["PSs9AnyObject", "showingBack"]
+- !private ["PSs9AnyObject", "size"]
+- ["PSs9AnyObject", "tapped"]
+- !private ["PSs9AnyObject", "transitionFromView"]
+- !private ["PSs9AnyObject", "userInteractionEnabled"]
+- !private ["PSs9AnyObject", "view"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- !private ["PSs23ArrayLiteralConvertible", "TransitionFlipFromLeft"]
+- !private ["PSs23ArrayLiteralConvertible", "TransitionFlipFromRight"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "width"]
+- !private ["PSs11CVarArgType", "CGRectMake"]
+- !private ["PSs11CVarArgType", "Selector"]
+- !private ["PSs11CVarArgType", "UIImage"]
+- !private ["PSs11CVarArgType", "UIImageView"]
+- !private ["PSs11CVarArgType", "UITapGestureRecognizer"]
+- !private ["PSs11CVarArgType", "UIView"]
+- !private ["PSs11CVarArgType", "UIViewAnimationOptions"]
+- !private ["PSs11CVarArgType", "addGestureRecognizer"]
+- !private ["PSs11CVarArgType", "addSubview"]
+- ["PSs11CVarArgType", "back"]
+- ["PSs11CVarArgType", "cardView"]
+- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- !private ["PSs11CVarArgType", "frame"]
+- ["PSs11CVarArgType", "front"]
+- !private ["PSs11CVarArgType", "image"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "numberOfTapsRequired"]
+- ["PSs11CVarArgType", "showingBack"]
+- !private ["PSs11CVarArgType", "size"]
+- ["PSs11CVarArgType", "tapped"]
+- !private ["PSs11CVarArgType", "transitionFromView"]
+- !private ["PSs11CVarArgType", "userInteractionEnabled"]
+- !private ["PSs11CVarArgType", "view"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- !private ["C9ParseDemo18CardViewController", "CGRectMake"]
+- !private ["C9ParseDemo18CardViewController", "Selector"]
+- !private ["C9ParseDemo18CardViewController", "UIImage"]
+- ["C9ParseDemo18CardViewController", "UIImageView"]
+- !private ["C9ParseDemo18CardViewController", "UITapGestureRecognizer"]
+- ["C9ParseDemo18CardViewController", "UIView"]
+- !private ["C9ParseDemo18CardViewController", "UIViewAnimationOptions"]
+- ["C9ParseDemo18CardViewController", "back"]
+- ["C9ParseDemo18CardViewController", "cardView"]
+- ["C9ParseDemo18CardViewController", "deinit"]
+- ["C9ParseDemo18CardViewController", "didReceiveMemoryWarning"]
+- ["C9ParseDemo18CardViewController", "front"]
+- ["C9ParseDemo18CardViewController", "init"]
+- ["C9ParseDemo18CardViewController", "showingBack"]
+- ["C9ParseDemo18CardViewController", "tapped"]
+- !private ["C9ParseDemo18CardViewController", "view"]
+- ["C9ParseDemo18CardViewController", "viewDidLoad"]
+- !private ["PSs23CustomStringConvertible", "CGRectMake"]
+- !private ["PSs23CustomStringConvertible", "Selector"]
+- !private ["PSs23CustomStringConvertible", "UIImage"]
+- !private ["PSs23CustomStringConvertible", "UIImageView"]
+- !private ["PSs23CustomStringConvertible", "UITapGestureRecognizer"]
+- !private ["PSs23CustomStringConvertible", "UIView"]
+- !private ["PSs23CustomStringConvertible", "UIViewAnimationOptions"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs23CustomStringConvertible", "addGestureRecognizer"]
+- !private ["PSs23CustomStringConvertible", "addSubview"]
+- ["PSs23CustomStringConvertible", "back"]
+- ["PSs23CustomStringConvertible", "cardView"]
+- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["PSs23CustomStringConvertible", "frame"]
+- ["PSs23CustomStringConvertible", "front"]
+- !private ["PSs23CustomStringConvertible", "image"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "numberOfTapsRequired"]
+- ["PSs23CustomStringConvertible", "showingBack"]
+- !private ["PSs23CustomStringConvertible", "size"]
+- ["PSs23CustomStringConvertible", "tapped"]
+- !private ["PSs23CustomStringConvertible", "transitionFromView"]
+- !private ["PSs23CustomStringConvertible", "userInteractionEnabled"]
+- !private ["PSs23CustomStringConvertible", "view"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs9Equatable", "CGRectMake"]
+- !private ["PSs9Equatable", "Selector"]
+- !private ["PSs9Equatable", "TransitionFlipFromLeft"]
+- !private ["PSs9Equatable", "TransitionFlipFromRight"]
+- !private ["PSs9Equatable", "UIImage"]
+- !private ["PSs9Equatable", "UIImageView"]
+- !private ["PSs9Equatable", "UITapGestureRecognizer"]
+- !private ["PSs9Equatable", "UIView"]
+- !private ["PSs9Equatable", "UIViewAnimationOptions"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- !private ["PSs9Equatable", "addGestureRecognizer"]
+- !private ["PSs9Equatable", "addSubview"]
+- ["PSs9Equatable", "back"]
+- ["PSs9Equatable", "cardView"]
+- ["PSs9Equatable", "didReceiveMemoryWarning"]
+- !private ["PSs9Equatable", "frame"]
+- ["PSs9Equatable", "front"]
+- !private ["PSs9Equatable", "height"]
+- !private ["PSs9Equatable", "image"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "numberOfTapsRequired"]
+- ["PSs9Equatable", "showingBack"]
+- !private ["PSs9Equatable", "size"]
+- ["PSs9Equatable", "tapped"]
+- !private ["PSs9Equatable", "transitionFromView"]
+- !private ["PSs9Equatable", "userInteractionEnabled"]
+- !private ["PSs9Equatable", "view"]
+- ["PSs9Equatable", "viewDidLoad"]
+- !private ["PSs9Equatable", "width"]
+- ["PSs9Equatable", ""]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs8Hashable", "CGRectMake"]
+- !private ["PSs8Hashable", "Selector"]
+- !private ["PSs8Hashable", "UIImage"]
+- !private ["PSs8Hashable", "UIImageView"]
+- !private ["PSs8Hashable", "UITapGestureRecognizer"]
+- !private ["PSs8Hashable", "UIView"]
+- !private ["PSs8Hashable", "UIViewAnimationOptions"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- !private ["PSs8Hashable", "addGestureRecognizer"]
+- !private ["PSs8Hashable", "addSubview"]
+- ["PSs8Hashable", "back"]
+- ["PSs8Hashable", "cardView"]
+- ["PSs8Hashable", "didReceiveMemoryWarning"]
+- !private ["PSs8Hashable", "frame"]
+- ["PSs8Hashable", "front"]
+- !private ["PSs8Hashable", "image"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "numberOfTapsRequired"]
+- ["PSs8Hashable", "showingBack"]
+- !private ["PSs8Hashable", "size"]
+- ["PSs8Hashable", "tapped"]
+- !private ["PSs8Hashable", "transitionFromView"]
+- !private ["PSs8Hashable", "userInteractionEnabled"]
+- !private ["PSs8Hashable", "view"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- !private ["PSo8NSCoding", "CGRectMake"]
+- !private ["PSo8NSCoding", "Selector"]
+- !private ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "UIImageView"]
+- !private ["PSo8NSCoding", "UITapGestureRecognizer"]
+- !private ["PSo8NSCoding", "UIView"]
+- !private ["PSo8NSCoding", "UIViewAnimationOptions"]
+- !private ["PSo8NSCoding", "addGestureRecognizer"]
+- !private ["PSo8NSCoding", "addSubview"]
+- ["PSo8NSCoding", "back"]
+- ["PSo8NSCoding", "cardView"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "frame"]
+- ["PSo8NSCoding", "front"]
+- !private ["PSo8NSCoding", "image"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "showingBack"]
+- !private ["PSo8NSCoding", "size"]
+- ["PSo8NSCoding", "tapped"]
+- !private ["PSo8NSCoding", "transitionFromView"]
+- !private ["PSo8NSCoding", "userInteractionEnabled"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "CGRectMake"]
+- !private ["PSo26NSExtensionRequestHandling", "Selector"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImageView"]
+- !private ["PSo26NSExtensionRequestHandling", "UITapGestureRecognizer"]
+- !private ["PSo26NSExtensionRequestHandling", "UIView"]
+- !private ["PSo26NSExtensionRequestHandling", "UIViewAnimationOptions"]
+- ["PSo26NSExtensionRequestHandling", "back"]
+- ["PSo26NSExtensionRequestHandling", "cardView"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "front"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "showingBack"]
+- ["PSo26NSExtensionRequestHandling", "tapped"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo8NSObject", "CGRectMake"]
+- !private ["CSo8NSObject", "Selector"]
+- !private ["CSo8NSObject", "UIImage"]
+- ["CSo8NSObject", "UIImageView"]
+- !private ["CSo8NSObject", "UITapGestureRecognizer"]
+- ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "UIViewAnimationOptions"]
+- !private ["CSo8NSObject", "addGestureRecognizer"]
+- !private ["CSo8NSObject", "addSubview"]
+- ["CSo8NSObject", "back"]
+- ["CSo8NSObject", "cardView"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "front"]
+- !private ["CSo8NSObject", "image"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "numberOfTapsRequired"]
+- ["CSo8NSObject", "showingBack"]
+- !private ["CSo8NSObject", "size"]
+- ["CSo8NSObject", "tapped"]
+- !private ["CSo8NSObject", "transitionFromView"]
+- !private ["CSo8NSObject", "userInteractionEnabled"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "CGRectMake"]
+- !private ["PSo16NSObjectProtocol", "Selector"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "UIImageView"]
+- !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "UIView"]
+- !private ["PSo16NSObjectProtocol", "UIViewAnimationOptions"]
+- !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- ["PSo16NSObjectProtocol", "back"]
+- ["PSo16NSObjectProtocol", "cardView"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "front"]
+- !private ["PSo16NSObjectProtocol", "image"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "numberOfTapsRequired"]
+- ["PSo16NSObjectProtocol", "showingBack"]
+- !private ["PSo16NSObjectProtocol", "size"]
+- ["PSo16NSObjectProtocol", "tapped"]
+- !private ["PSo16NSObjectProtocol", "transitionFromView"]
+- !private ["PSo16NSObjectProtocol", "userInteractionEnabled"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "size"]
+- !private ["PSs21NilLiteralConvertible", "init"]
+- !private ["PSs13OptionSetType", "TransitionFlipFromLeft"]
+- !private ["PSs13OptionSetType", "TransitionFlipFromRight"]
+- !private ["PSs16RawRepresentable", "TransitionFlipFromLeft"]
+- !private ["PSs16RawRepresentable", "TransitionFlipFromRight"]
+- !private ["V10ObjectiveC8Selector", "init"]
+- !private ["PSs14SetAlgebraType", "TransitionFlipFromLeft"]
+- !private ["PSs14SetAlgebraType", "TransitionFlipFromRight"]
+- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- !private ["PSo29UIAccessibilityIdentification", "image"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "size"]
+- !private ["PSo29UIAccessibilityIdentification", "transitionFromView"]
+- !private ["PSo29UIAccessibilityIdentification", "userInteractionEnabled"]
+- !private ["PSo12UIAppearance", "addGestureRecognizer"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "frame"]
+- !private ["PSo12UIAppearance", "image"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "transitionFromView"]
+- !private ["PSo12UIAppearance", "userInteractionEnabled"]
+- !private ["PSo21UIAppearanceContainer", "CGRectMake"]
+- !private ["PSo21UIAppearanceContainer", "Selector"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "UIImageView"]
+- !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "UIView"]
+- !private ["PSo21UIAppearanceContainer", "UIViewAnimationOptions"]
+- !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- ["PSo21UIAppearanceContainer", "back"]
+- ["PSo21UIAppearanceContainer", "cardView"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- ["PSo21UIAppearanceContainer", "front"]
+- !private ["PSo21UIAppearanceContainer", "image"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "showingBack"]
+- ["PSo21UIAppearanceContainer", "tapped"]
+- !private ["PSo21UIAppearanceContainer", "transitionFromView"]
+- !private ["PSo21UIAppearanceContainer", "userInteractionEnabled"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "CGRectMake"]
+- !private ["PSo18UIContentContainer", "Selector"]
+- !private ["PSo18UIContentContainer", "UIImage"]
+- !private ["PSo18UIContentContainer", "UIImageView"]
+- !private ["PSo18UIContentContainer", "UITapGestureRecognizer"]
+- !private ["PSo18UIContentContainer", "UIView"]
+- !private ["PSo18UIContentContainer", "UIViewAnimationOptions"]
+- ["PSo18UIContentContainer", "back"]
+- ["PSo18UIContentContainer", "cardView"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "front"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "showingBack"]
+- ["PSo18UIContentContainer", "tapped"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- !private ["PSo17UICoordinateSpace", "image"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "transitionFromView"]
+- !private ["PSo17UICoordinateSpace", "userInteractionEnabled"]
+- !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- !private ["PSo13UIDynamicItem", "image"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "transitionFromView"]
+- !private ["PSo13UIDynamicItem", "userInteractionEnabled"]
+- !private ["PSo18UIFocusEnvironment", "CGRectMake"]
+- !private ["PSo18UIFocusEnvironment", "Selector"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "UIImageView"]
+- !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "UIView"]
+- !private ["PSo18UIFocusEnvironment", "UIViewAnimationOptions"]
+- !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- ["PSo18UIFocusEnvironment", "back"]
+- ["PSo18UIFocusEnvironment", "cardView"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- ["PSo18UIFocusEnvironment", "front"]
+- !private ["PSo18UIFocusEnvironment", "image"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "showingBack"]
+- ["PSo18UIFocusEnvironment", "tapped"]
+- !private ["PSo18UIFocusEnvironment", "transitionFromView"]
+- !private ["PSo18UIFocusEnvironment", "userInteractionEnabled"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo19UIGestureRecognizer", "init"]
+- !private ["CSo19UIGestureRecognizer", "numberOfTapsRequired"]
+- !private ["CSo7UIImage", "init"]
+- !private ["CSo7UIImage", "size"]
+- !private ["CSo11UIImageView", "frame"]
+- !private ["CSo11UIImageView", "image"]
+- !private ["CSo11UIImageView", "init"]
+- !private ["CSo11UIResponder", "CGRectMake"]
+- !private ["CSo11UIResponder", "Selector"]
+- !private ["CSo11UIResponder", "UIImage"]
+- ["CSo11UIResponder", "UIImageView"]
+- !private ["CSo11UIResponder", "UITapGestureRecognizer"]
+- ["CSo11UIResponder", "UIView"]
+- !private ["CSo11UIResponder", "UIViewAnimationOptions"]
+- !private ["CSo11UIResponder", "addGestureRecognizer"]
+- !private ["CSo11UIResponder", "addSubview"]
+- ["CSo11UIResponder", "back"]
+- ["CSo11UIResponder", "cardView"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "front"]
+- !private ["CSo11UIResponder", "image"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "showingBack"]
+- ["CSo11UIResponder", "tapped"]
+- !private ["CSo11UIResponder", "transitionFromView"]
+- !private ["CSo11UIResponder", "userInteractionEnabled"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "CGRectMake"]
+- !private ["PSo16UIStateRestoring", "Selector"]
+- !private ["PSo16UIStateRestoring", "UIImage"]
+- !private ["PSo16UIStateRestoring", "UIImageView"]
+- !private ["PSo16UIStateRestoring", "UITapGestureRecognizer"]
+- !private ["PSo16UIStateRestoring", "UIView"]
+- !private ["PSo16UIStateRestoring", "UIViewAnimationOptions"]
+- ["PSo16UIStateRestoring", "back"]
+- ["PSo16UIStateRestoring", "cardView"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "front"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "showingBack"]
+- ["PSo16UIStateRestoring", "tapped"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo22UITapGestureRecognizer", "init"]
+- !private ["CSo22UITapGestureRecognizer", "numberOfTapsRequired"]
+- !private ["PSo18UITraitEnvironment", "CGRectMake"]
+- !private ["PSo18UITraitEnvironment", "Selector"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "UIImageView"]
+- !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "UIView"]
+- !private ["PSo18UITraitEnvironment", "UIViewAnimationOptions"]
+- !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- ["PSo18UITraitEnvironment", "back"]
+- ["PSo18UITraitEnvironment", "cardView"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- ["PSo18UITraitEnvironment", "front"]
+- !private ["PSo18UITraitEnvironment", "image"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "showingBack"]
+- ["PSo18UITraitEnvironment", "tapped"]
+- !private ["PSo18UITraitEnvironment", "transitionFromView"]
+- !private ["PSo18UITraitEnvironment", "userInteractionEnabled"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addGestureRecognizer"]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "frame"]
+- !private ["CSo6UIView", "image"]
+- !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "transitionFromView"]
+- !private ["CSo6UIView", "userInteractionEnabled"]
+- !private ["VSC22UIViewAnimationOptions", "TransitionFlipFromLeft"]
+- !private ["VSC22UIViewAnimationOptions", "TransitionFlipFromRight"]
+- !private ["CSo16UIViewController", "CGRectMake"]
+- !private ["CSo16UIViewController", "Selector"]
+- !private ["CSo16UIViewController", "UIImage"]
+- ["CSo16UIViewController", "UIImageView"]
+- !private ["CSo16UIViewController", "UITapGestureRecognizer"]
+- ["CSo16UIViewController", "UIView"]
+- !private ["CSo16UIViewController", "UIViewAnimationOptions"]
+- ["CSo16UIViewController", "back"]
+- ["CSo16UIViewController", "cardView"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "front"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "showingBack"]
+- ["CSo16UIViewController", "tapped"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs24_ImageLiteralConvertible", "init"]
+- !private ["PSs24_ImageLiteralConvertible", "size"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "addGestureRecognizer"]
+- !private ["PSs12_Reflectable", "addSubview"]
+- !private ["PSs12_Reflectable", "frame"]
+- !private ["PSs12_Reflectable", "height"]
+- !private ["PSs12_Reflectable", "image"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "transitionFromView"]
+- !private ["PSs12_Reflectable", "userInteractionEnabled"]
+- !private ["PSs12_Reflectable", "width"]
+depends-nominal:
+- "PSs9AnyObject"
+- !private "PSs23ArrayLiteralConvertible"
+- !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC6CGSize"
+- "PSs11CVarArgType"
+- "C9ParseDemo18CardViewController"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "PSs21NilLiteralConvertible"
+- !private "PSs13OptionSetType"
+- !private "PSs16RawRepresentable"
+- !private "V10ObjectiveC8Selector"
+- !private "PSs14SetAlgebraType"
+- !private "PSs24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo19UIGestureRecognizer"
+- !private "CSo7UIImage"
+- !private "CSo11UIImageView"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- !private "CSo22UITapGestureRecognizer"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "VSC22UIViewAnimationOptions"
+- "CSo16UIViewController"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs24_ImageLiteralConvertible"
+- !private "PSs21_ObjectiveCBridgeable"
+- !private "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "./Bolts.framework/Headers/BFWebViewAppLinkResolver.h"
+- "./Bolts.framework/Headers/BFURL.h"
+- "./Bolts.framework/Headers/BFMeasurementEvent.h"
+- "./Bolts.framework/Headers/BFAppLinkTarget.h"
+- "./Bolts.framework/Headers/BFAppLinkReturnToRefererView.h"
+- "./Bolts.framework/Headers/BFAppLinkReturnToRefererController.h"
+- "./Bolts.framework/Headers/BFAppLinkResolving.h"
+- "./Bolts.framework/Headers/BFAppLink.h"
+- "./Bolts.framework/Headers/BFAppLinkNavigation.h"
+- "./Bolts.framework/Headers/BFTaskCompletionSource.h"
+- "./Bolts.framework/Headers/BFTask.h"
+- "./Bolts.framework/Headers/BFExecutor.h"
+- "./Bolts.framework/Headers/BFCancellationTokenSource.h"
+- "./Bolts.framework/Headers/BFCancellationTokenRegistration.h"
+- "./Bolts.framework/Headers/BFCancellationToken.h"
+- "./Bolts.framework/Headers/BoltsVersion.h"
+- "./Bolts.framework/Headers/Bolts.h"
+- "./Bolts.framework/Modules/module.modulemap"
+- "./Parse.framework/Headers/PFPurchase.h"
+- "./Parse.framework/Headers/PFProduct.h"
+- "./Parse.framework/Headers/PFNetworkActivityIndicatorManager.h"
+- "./Parse.framework/Headers/PFPush.h"
+- "./Parse.framework/Headers/PFInstallation.h"
+- "./Parse.framework/Headers/PFSession.h"
+- "./Parse.framework/Headers/PFRole.h"
+- "./Parse.framework/Headers/PFRelation.h"
+- "./Parse.framework/Headers/PFQuery.h"
+- "./Parse.framework/Headers/PFObject+Subclass.h"
+- "./Parse.framework/Headers/PFGeoPoint.h"
+- "./Parse.framework/Headers/PFFile.h"
+- "./Parse.framework/Headers/PFConfig.h"
+- "./Parse.framework/Headers/PFCloud.h"
+- "./Parse.framework/Headers/PFSubclassing.h"
+- "./Parse.framework/Headers/PFObject.h"
+- "./Parse.framework/Headers/PFUser.h"
+- "./Parse.framework/Headers/PFAnonymousUtils.h"
+- "./Parse.framework/Headers/PFConstants.h"
+- "/Users/rongzhou/Desktop/undefined/ParseDemo/Bolts.framework/Modules/module.modulemap"
+- "./Parse.framework/Headers/PFAnalytics.h"
+- "./Parse.framework/Headers/PFNullability.h"
+- "./Parse.framework/Headers/PFACL.h"
+- "./Parse.framework/Headers/Parse.h"
+- "./Parse.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+interface-hash: "0a0b1ae4a823f68e48c80e182b35e63b"
