@@ -137,6 +137,7 @@ SWIFT_CLASS("_TtC9ParseDemo11AppDelegate")
 
 SWIFT_CLASS("_TtC9ParseDemo18CardViewController")
 @interface CardViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified someLabel;
 @property (nonatomic, strong) UIView * __null_unspecified cardView;
 @property (nonatomic, strong) UIImageView * __null_unspecified back;
 @property (nonatomic, strong) UIImageView * __null_unspecified front;

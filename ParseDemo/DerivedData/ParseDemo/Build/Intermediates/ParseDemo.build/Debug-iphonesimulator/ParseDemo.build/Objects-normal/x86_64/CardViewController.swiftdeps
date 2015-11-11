@@ -6,25 +6,27 @@ provides-nominal:
 provides-member:
 - ["C9ParseDemo18CardViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "cardView"
-- "showingBack"
-- "tapped"
-- "front"
 - "viewDidLoad"
+- "tapped"
 - "back"
+- "showingBack"
+- "cardView"
+- "someLabel"
+- "front"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "UIViewController"
-- "BooleanLiteralType"
-- !private "Selector"
-- "UIView"
-- !private "CGRectMake"
 - !private "UIViewAnimationOptions"
-- !private "StringLiteralType"
-- !private "UITapGestureRecognizer"
+- "BooleanLiteralType"
 - "CardViewController"
+- "UIView"
+- "UILabel"
+- "UIViewController"
 - !private "UIImage"
+- !private "UITapGestureRecognizer"
+- !private "StringLiteralType"
+- !private "CGRectMake"
 - "UIImageView"
+- !private "Selector"
 depends-member:
 - !private ["PSs9AnyObject", "CGRectMake"]
 - !private ["PSs9AnyObject", "Selector"]
@@ -45,6 +47,7 @@ depends-member:
 - !private ["PSs9AnyObject", "numberOfTapsRequired"]
 - ["PSs9AnyObject", "showingBack"]
 - !private ["PSs9AnyObject", "size"]
+- ["PSs9AnyObject", "someLabel"]
 - ["PSs9AnyObject", "tapped"]
 - !private ["PSs9AnyObject", "transitionFromView"]
 - !private ["PSs9AnyObject", "userInteractionEnabled"]
@@ -78,6 +81,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "numberOfTapsRequired"]
 - ["PSs11CVarArgType", "showingBack"]
 - !private ["PSs11CVarArgType", "size"]
+- ["PSs11CVarArgType", "someLabel"]
 - ["PSs11CVarArgType", "tapped"]
 - !private ["PSs11CVarArgType", "transitionFromView"]
 - !private ["PSs11CVarArgType", "userInteractionEnabled"]
@@ -88,6 +92,7 @@ depends-member:
 - !private ["C9ParseDemo18CardViewController", "Selector"]
 - !private ["C9ParseDemo18CardViewController", "UIImage"]
 - ["C9ParseDemo18CardViewController", "UIImageView"]
+- ["C9ParseDemo18CardViewController", "UILabel"]
 - !private ["C9ParseDemo18CardViewController", "UITapGestureRecognizer"]
 - ["C9ParseDemo18CardViewController", "UIView"]
 - !private ["C9ParseDemo18CardViewController", "UIViewAnimationOptions"]
@@ -98,6 +103,7 @@ depends-member:
 - ["C9ParseDemo18CardViewController", "front"]
 - ["C9ParseDemo18CardViewController", "init"]
 - ["C9ParseDemo18CardViewController", "showingBack"]
+- ["C9ParseDemo18CardViewController", "someLabel"]
 - ["C9ParseDemo18CardViewController", "tapped"]
 - !private ["C9ParseDemo18CardViewController", "view"]
 - ["C9ParseDemo18CardViewController", "viewDidLoad"]
@@ -121,6 +127,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "numberOfTapsRequired"]
 - ["PSs23CustomStringConvertible", "showingBack"]
 - !private ["PSs23CustomStringConvertible", "size"]
+- ["PSs23CustomStringConvertible", "someLabel"]
 - ["PSs23CustomStringConvertible", "tapped"]
 - !private ["PSs23CustomStringConvertible", "transitionFromView"]
 - !private ["PSs23CustomStringConvertible", "userInteractionEnabled"]
@@ -150,6 +157,7 @@ depends-member:
 - !private ["PSs9Equatable", "numberOfTapsRequired"]
 - ["PSs9Equatable", "showingBack"]
 - !private ["PSs9Equatable", "size"]
+- ["PSs9Equatable", "someLabel"]
 - ["PSs9Equatable", "tapped"]
 - !private ["PSs9Equatable", "transitionFromView"]
 - !private ["PSs9Equatable", "userInteractionEnabled"]
@@ -178,6 +186,7 @@ depends-member:
 - !private ["PSs8Hashable", "numberOfTapsRequired"]
 - ["PSs8Hashable", "showingBack"]
 - !private ["PSs8Hashable", "size"]
+- ["PSs8Hashable", "someLabel"]
 - ["PSs8Hashable", "tapped"]
 - !private ["PSs8Hashable", "transitionFromView"]
 - !private ["PSs8Hashable", "userInteractionEnabled"]
@@ -202,6 +211,7 @@ depends-member:
 - ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "showingBack"]
 - !private ["PSo8NSCoding", "size"]
+- ["PSo8NSCoding", "someLabel"]
 - ["PSo8NSCoding", "tapped"]
 - !private ["PSo8NSCoding", "transitionFromView"]
 - !private ["PSo8NSCoding", "userInteractionEnabled"]
@@ -221,6 +231,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "front"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "showingBack"]
+- ["PSo26NSExtensionRequestHandling", "someLabel"]
 - ["PSo26NSExtensionRequestHandling", "tapped"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -229,6 +240,7 @@ depends-member:
 - !private ["CSo8NSObject", "Selector"]
 - !private ["CSo8NSObject", "UIImage"]
 - ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UITapGestureRecognizer"]
 - ["CSo8NSObject", "UIView"]
 - !private ["CSo8NSObject", "UIViewAnimationOptions"]
@@ -244,6 +256,7 @@ depends-member:
 - !private ["CSo8NSObject", "numberOfTapsRequired"]
 - ["CSo8NSObject", "showingBack"]
 - !private ["CSo8NSObject", "size"]
+- ["CSo8NSObject", "someLabel"]
 - ["CSo8NSObject", "tapped"]
 - !private ["CSo8NSObject", "transitionFromView"]
 - !private ["CSo8NSObject", "userInteractionEnabled"]
@@ -268,6 +281,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "numberOfTapsRequired"]
 - ["PSo16NSObjectProtocol", "showingBack"]
 - !private ["PSo16NSObjectProtocol", "size"]
+- ["PSo16NSObjectProtocol", "someLabel"]
 - ["PSo16NSObjectProtocol", "tapped"]
 - !private ["PSo16NSObjectProtocol", "transitionFromView"]
 - !private ["PSo16NSObjectProtocol", "userInteractionEnabled"]
@@ -317,6 +331,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "image"]
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "showingBack"]
+- ["PSo21UIAppearanceContainer", "someLabel"]
 - ["PSo21UIAppearanceContainer", "tapped"]
 - !private ["PSo21UIAppearanceContainer", "transitionFromView"]
 - !private ["PSo21UIAppearanceContainer", "userInteractionEnabled"]
@@ -336,6 +351,7 @@ depends-member:
 - ["PSo18UIContentContainer", "front"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "showingBack"]
+- ["PSo18UIContentContainer", "someLabel"]
 - ["PSo18UIContentContainer", "tapped"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -371,6 +387,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "image"]
 - ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "showingBack"]
+- ["PSo18UIFocusEnvironment", "someLabel"]
 - ["PSo18UIFocusEnvironment", "tapped"]
 - !private ["PSo18UIFocusEnvironment", "transitionFromView"]
 - !private ["PSo18UIFocusEnvironment", "userInteractionEnabled"]
@@ -388,6 +405,7 @@ depends-member:
 - !private ["CSo11UIResponder", "Selector"]
 - !private ["CSo11UIResponder", "UIImage"]
 - ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UITapGestureRecognizer"]
 - ["CSo11UIResponder", "UIView"]
 - !private ["CSo11UIResponder", "UIViewAnimationOptions"]
@@ -401,6 +419,7 @@ depends-member:
 - !private ["CSo11UIResponder", "image"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "showingBack"]
+- ["CSo11UIResponder", "someLabel"]
 - ["CSo11UIResponder", "tapped"]
 - !private ["CSo11UIResponder", "transitionFromView"]
 - !private ["CSo11UIResponder", "userInteractionEnabled"]
@@ -419,6 +438,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "front"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "showingBack"]
+- ["PSo16UIStateRestoring", "someLabel"]
 - ["PSo16UIStateRestoring", "tapped"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -442,6 +462,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "image"]
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "showingBack"]
+- ["PSo18UITraitEnvironment", "someLabel"]
 - ["PSo18UITraitEnvironment", "tapped"]
 - !private ["PSo18UITraitEnvironment", "transitionFromView"]
 - !private ["PSo18UITraitEnvironment", "userInteractionEnabled"]
@@ -461,6 +482,7 @@ depends-member:
 - !private ["CSo16UIViewController", "Selector"]
 - !private ["CSo16UIViewController", "UIImage"]
 - ["CSo16UIViewController", "UIImageView"]
+- ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UITapGestureRecognizer"]
 - ["CSo16UIViewController", "UIView"]
 - !private ["CSo16UIViewController", "UIViewAnimationOptions"]
@@ -470,6 +492,7 @@ depends-member:
 - ["CSo16UIViewController", "front"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "showingBack"]
+- ["CSo16UIViewController", "someLabel"]
 - ["CSo16UIViewController", "tapped"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -590,4 +613,4 @@ depends-external:
 - "./Parse.framework/Headers/Parse.h"
 - "./Parse.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
-interface-hash: "0a0b1ae4a823f68e48c80e182b35e63b"
+interface-hash: "83378814f4fa02de3f8939ba8e6fc539"

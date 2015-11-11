@@ -10,16 +10,19 @@ import UIKit
 import Parse
 
 class CardViewController: UIViewController {
+    @IBOutlet weak var someLabel: UILabel!
     var cardView: UIView!
     var back: UIImageView!
     var front: UIImageView!
+    
     var showingBack = true
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         back = UIImageView(image: UIImage(named: "back.png"))
-        back.frame = CGRectMake(0,0,100,150)
-        front = UIImageView(image: UIImage(named: "front.jpg"))
-        front.frame = CGRectMake(0,0,100,150)
+        back.frame = CGRectMake(0,0,350,200)
+        front = UIImageView(image: UIImage(named: "front.png"))
+        front.frame = CGRectMake(0,0,350,200)
         
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
         singleTap.numberOfTapsRequired = 1
