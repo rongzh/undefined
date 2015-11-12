@@ -14,6 +14,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     @IBOutlet weak var friendname: UITextField!
     
+    @IBOutlet weak var myTable: UITableView!
     var friendsArray:[String] = [String]()
     
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
     func retrieveFriends(){
-        var query:PFQuery = PFQuery(className: "Friends")
+        var query:PFQuery = PFQuery(className: "User")
         
         query.getObjectInBackgroundWithId("lZ4eHLhJex") {
             (fid1: PFObject?, error: NSError?) -> Void in

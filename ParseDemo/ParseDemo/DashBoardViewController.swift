@@ -10,10 +10,12 @@ import UIKit
 import Parse
 
 class DashBoardViewController: UIViewController {
+    @IBOutlet weak var usernameLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.usernameLabel.text = PFUser.currentUser()!.username
         // Show the current visitor's username
     }
     

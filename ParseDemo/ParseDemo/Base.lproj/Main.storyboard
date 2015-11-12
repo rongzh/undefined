@@ -127,16 +127,30 @@
                                     <segue destination="9B6-J3-lPL" kind="show" id="zhG-Ng-6YK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-42-f86">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-42-f86">
                                 <rect key="frame" x="28" y="105" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-TD-YXW">
+                                <rect key="frame" x="48" y="198" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="uY8-4V-V0Q"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TgO-TD-YXW" firstAttribute="top" secondItem="qpN-42-f86" secondAttribute="bottom" id="Uqw-Ab-omG"/>
+                            <constraint firstAttribute="trailing" secondItem="TgO-TD-YXW" secondAttribute="trailing" id="gB5-vY-7Uq"/>
+                            <constraint firstItem="TgO-TD-YXW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leading" id="pCT-6w-qob"/>
+                            <constraint firstItem="VCw-O3-q1X" firstAttribute="top" secondItem="TgO-TD-YXW" secondAttribute="bottom" id="tWF-sj-q8f"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="friendname" destination="qpN-42-f86" id="xr2-Ve-Vbk"/>
+                        <outlet property="myTable" destination="TgO-TD-YXW" id="idt-t9-3Fy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JR9-EH-uhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -511,37 +525,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-cB-LYH">
-                                <rect key="frame" x="128" y="135" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-cB-LYH">
+                                <rect key="frame" x="274" y="285" width="52" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="presentation" id="ByT-Gl-qjJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-nA-YTs">
-                                <rect key="frame" x="118" y="209" width="85" height="30"/>
+                                <rect key="frame" x="66" y="162" width="85" height="30"/>
                                 <state key="normal" title="Add Friend"/>
                                 <connections>
                                     <segue destination="1dR-rn-7Rw" kind="presentation" id="4Uv-lj-xTP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-e2-SGc">
-                                <rect key="frame" x="115" y="285" width="78" height="30"/>
+                                <rect key="frame" x="66" y="285" width="78" height="30"/>
                                 <state key="normal" title="View Cards"/>
                                 <connections>
                                     <segue destination="tcJ-56-XNp" kind="presentation" id="8ng-Dr-5KM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-jw-t38">
-                                <rect key="frame" x="128" y="364" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-jw-t38">
+                                <rect key="frame" x="274" y="162" width="51" height="30"/>
                                 <state key="normal" title="Friends"/>
                                 <connections>
                                     <segue destination="A7a-J1-GLu" kind="show" id="QQP-qH-PdR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3w-5C-yGk">
+                                <rect key="frame" x="178" y="40" width="97" height="30"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-fa-DOa">
+                                <rect key="frame" x="166" y="85" width="97" height="30"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="usernameLabel" destination="rqu-fa-DOa" id="Rud-cv-Ti4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd8-V9-lJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -646,6 +675,33 @@
             </objects>
             <point key="canvasLocation" x="489" y="1046"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ayE-Yq-5tf">
+            <objects>
+                <tableViewController id="UZD-TZ-hbG" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zpa-c9-p1K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nkk-E2-TVy">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nkk-E2-TVy" id="NHg-np-g74">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UZD-TZ-hbG" id="V2T-mQ-Rt8"/>
+                            <outlet property="delegate" destination="UZD-TZ-hbG" id="P0c-0x-1dz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUv-0w-8dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="1280" height="1706"/>
@@ -654,6 +710,6 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7il-yF-g8H"/>
+        <segue reference="zhG-Ng-6YK"/>
     </inferredMetricsTieBreakers>
 </document>
