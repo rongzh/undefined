@@ -9,21 +9,33 @@
 import UIKit
 import Parse
 
-class FriendViewController: UIViewController {
+class FriendViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate{
     @IBOutlet weak var userNameLabel: UILabel!
+    
+    @IBOutlet weak var friendname: UITextField!
+    
+    var friendsArray:[String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Show the current visitor's username
-        if let pUserName = PFUser.currentUser()?["username"] as? String {
-            self.userNameLabel.text = "@" + pUserName
+    }
+    
+    func retrieveFriends(){
+        var query:PFQuery = PFQuery(className: "Friends")
+        
+        query.getObjectInBackgroundWithId("lZ4eHLhJex") {
+            (fid1: PFObject?, error: NSError?) -> Void in
+            if error == nil && fid1 != nil {
+                self.friendname.text = "fid1";
+            } else {
+                print(error)
+            }
         }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     /*
