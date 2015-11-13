@@ -563,99 +563,99 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3w-5C-yGk">
-                                <rect key="frame" x="178" y="40" width="97" height="30"/>
+                                <rect key="frame" x="144" y="326" width="97" height="30"/>
                                 <animations/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-fa-DOa">
-                                <rect key="frame" x="166" y="85" width="97" height="30"/>
-                                <animations/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXl-Db-mHY">
-                                <rect key="frame" x="35" y="123" width="240" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-nA-YTs">
-                                        <rect key="frame" x="66" y="49" width="85" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Add Friend"/>
-                                        <connections>
-                                            <segue destination="1dR-rn-7Rw" kind="presentation" id="4Uv-lj-xTP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.76844739230000003" green="0.83080808080000002" blue="0.092483680920000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-4J-nGA">
-                                <rect key="frame" x="307" y="123" width="240" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-e2-SGc">
-                                        <rect key="frame" x="81" y="49" width="78" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="View Cards"/>
-                                        <connections>
-                                            <segue destination="tcJ-56-XNp" kind="presentation" id="8ng-Dr-5KM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.092155945043812637" green="1" blue="0.92032247395820255" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02I-pQ-Txx">
-                                <rect key="frame" x="52" y="306" width="240" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-jw-t38">
-                                        <rect key="frame" x="95" y="49" width="51" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Friends"/>
-                                        <connections>
-                                            <segue destination="A7a-J1-GLu" kind="show" id="QQP-qH-PdR"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.51328002725331889" blue="0.83755069421278117" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrW-tq-rjC">
-                                <rect key="frame" x="307" y="306" width="240" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.55218445156638518" blue="0.55229309799411841" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-cB-LYH">
-                                <rect key="frame" x="468" y="54" width="52" height="30"/>
+                                <rect key="frame" x="428" y="318" width="52" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="presentation" id="ByT-Gl-qjJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-e2-SGc">
+                                <rect key="frame" x="227" y="443" width="78" height="30"/>
+                                <animations/>
+                                <state key="normal" title="View Cards"/>
+                                <connections>
+                                    <segue destination="tcJ-56-XNp" kind="presentation" id="8ng-Dr-5KM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-nA-YTs">
+                                <rect key="frame" x="336" y="431" width="85" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add Friend"/>
+                                <connections>
+                                    <segue destination="1dR-rn-7Rw" kind="presentation" id="4Uv-lj-xTP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-jw-t38">
+                                <rect key="frame" x="353" y="318" width="51" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Friends"/>
+                                <connections>
+                                    <segue destination="A7a-J1-GLu" kind="show" id="QQP-qH-PdR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-Nu-OcU">
+                                <rect key="frame" x="42" y="128" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="decks" translatesAutoresizingMaskIntoConstraints="NO" id="HOO-xk-YjP">
+                                <rect key="frame" x="305" y="128" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-Jd-eUJ">
+                                <rect key="frame" x="42" y="277" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="2M0-WL-mW8">
+                                <rect key="frame" x="305" y="277" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="Yhd-3e-B3G">
+                                <rect key="frame" x="42" y="277" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="lZk-bU-jmD">
+                                <rect key="frame" x="42" y="277" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-fa-DOa">
+                                <rect key="frame" x="48" y="413" width="157" height="100"/>
+                                <animations/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="02I-pQ-Txx" firstAttribute="width" secondItem="XXl-Db-mHY" secondAttribute="width" id="4eb-9o-XdQ"/>
-                            <constraint firstItem="02I-pQ-Txx" firstAttribute="leading" secondItem="WbH-MD-m3N" secondAttribute="leadingMargin" constant="10" id="CAi-6B-6uQ"/>
-                            <constraint firstItem="HrW-tq-rjC" firstAttribute="width" secondItem="XXl-Db-mHY" secondAttribute="width" id="CC4-3W-EUe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HrW-tq-rjC" secondAttribute="trailing" constant="15" id="D8u-FY-pox"/>
-                            <constraint firstItem="RU2-4J-nGA" firstAttribute="width" secondItem="XXl-Db-mHY" secondAttribute="width" id="DaY-bT-a1G"/>
-                            <constraint firstItem="02I-pQ-Txx" firstAttribute="height" secondItem="XXl-Db-mHY" secondAttribute="height" id="ECo-dn-zRF"/>
-                            <constraint firstItem="02I-pQ-Txx" firstAttribute="top" secondItem="XXl-Db-mHY" secondAttribute="bottom" constant="10" id="F8v-yC-Nmw"/>
-                            <constraint firstItem="HrW-tq-rjC" firstAttribute="top" secondItem="RU2-4J-nGA" secondAttribute="bottom" constant="10" id="FXq-aw-cKw"/>
-                            <constraint firstItem="RU2-4J-nGA" firstAttribute="height" secondItem="XXl-Db-mHY" secondAttribute="height" id="Inv-YG-h9p"/>
-                            <constraint firstItem="HrW-tq-rjC" firstAttribute="leading" secondItem="02I-pQ-Txx" secondAttribute="trailing" constant="10" id="KhK-mx-aTg"/>
-                            <constraint firstItem="NWC-E9-DHf" firstAttribute="top" secondItem="02I-pQ-Txx" secondAttribute="bottom" constant="15" id="QHf-cC-UOq"/>
-                            <constraint firstItem="NWC-E9-DHf" firstAttribute="top" secondItem="HrW-tq-rjC" secondAttribute="bottom" constant="15" id="Sh8-fS-242"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RU2-4J-nGA" secondAttribute="trailing" constant="15" id="V1J-Ju-sdk"/>
-                            <constraint firstItem="XXl-Db-mHY" firstAttribute="top" secondItem="rqu-fa-DOa" secondAttribute="bottom" constant="20" id="bhd-bc-346"/>
-                            <constraint firstItem="XXl-Db-mHY" firstAttribute="top" secondItem="rqu-fa-DOa" secondAttribute="bottom" constant="40" id="gSE-17-XeL"/>
-                            <constraint firstItem="RU2-4J-nGA" firstAttribute="leading" secondItem="XXl-Db-mHY" secondAttribute="trailing" constant="10" id="hFk-p9-Gsn"/>
-                            <constraint firstItem="XXl-Db-mHY" firstAttribute="leading" secondItem="WbH-MD-m3N" secondAttribute="leadingMargin" constant="10" id="zS4-JI-tQ5"/>
-                            <constraint firstItem="HrW-tq-rjC" firstAttribute="height" secondItem="XXl-Db-mHY" secondAttribute="height" id="zrv-bb-RJj"/>
+                            <constraint firstItem="uc7-Jd-eUJ" firstAttribute="leading" secondItem="WbH-MD-m3N" secondAttribute="leadingMargin" constant="15" id="1PY-LZ-QQ6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HOO-xk-YjP" secondAttribute="trailing" constant="15" id="4hn-vk-0di"/>
+                            <constraint firstItem="uc7-Jd-eUJ" firstAttribute="width" secondItem="cWY-Nu-OcU" secondAttribute="width" id="DUs-pb-ny1"/>
+                            <constraint firstItem="2M0-WL-mW8" firstAttribute="leading" secondItem="uc7-Jd-eUJ" secondAttribute="trailing" constant="10" id="H07-C5-tXv"/>
+                            <constraint firstItem="uc7-Jd-eUJ" firstAttribute="height" secondItem="cWY-Nu-OcU" secondAttribute="height" id="P83-yY-We8"/>
+                            <constraint firstItem="HOO-xk-YjP" firstAttribute="width" secondItem="cWY-Nu-OcU" secondAttribute="width" id="RT0-Tg-qId"/>
+                            <constraint firstItem="cWY-Nu-OcU" firstAttribute="bottom" secondItem="uc7-Jd-eUJ" secondAttribute="top" constant="10" id="RpE-Cc-2NS"/>
+                            <constraint firstItem="2M0-WL-mW8" firstAttribute="height" secondItem="cWY-Nu-OcU" secondAttribute="height" id="SLl-oH-omH"/>
+                            <constraint firstItem="NWC-E9-DHf" firstAttribute="top" secondItem="2M0-WL-mW8" secondAttribute="bottom" constant="15" id="VsF-eW-coG"/>
+                            <constraint firstItem="HOO-xk-YjP" firstAttribute="top" secondItem="47U-6X-qus" secondAttribute="bottom" constant="30" id="Ylk-wv-hD7"/>
+                            <constraint firstItem="2M0-WL-mW8" firstAttribute="top" secondItem="HOO-xk-YjP" secondAttribute="bottom" constant="10" id="Zgx-sC-OMH"/>
+                            <constraint firstItem="HOO-xk-YjP" firstAttribute="leading" secondItem="cWY-Nu-OcU" secondAttribute="trailing" constant="10" id="ejY-bX-9nK"/>
+                            <constraint firstItem="cWY-Nu-OcU" firstAttribute="leading" secondItem="WbH-MD-m3N" secondAttribute="leadingMargin" constant="15" id="hYg-29-zBz"/>
+                            <constraint firstItem="NWC-E9-DHf" firstAttribute="top" secondItem="uc7-Jd-eUJ" secondAttribute="bottom" constant="15" id="jT5-Xk-hx2"/>
+                            <constraint firstItem="HOO-xk-YjP" firstAttribute="bottom" secondItem="2M0-WL-mW8" secondAttribute="top" constant="10" id="mUK-ti-9Ex"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2M0-WL-mW8" secondAttribute="trailing" constant="15" id="rYs-In-rzf"/>
+                            <constraint firstItem="HOO-xk-YjP" firstAttribute="height" secondItem="cWY-Nu-OcU" secondAttribute="height" id="vbU-X7-gk1"/>
+                            <constraint firstItem="uc7-Jd-eUJ" firstAttribute="top" secondItem="cWY-Nu-OcU" secondAttribute="bottom" constant="10" id="vqg-kD-Pjr"/>
+                            <constraint firstItem="2M0-WL-mW8" firstAttribute="width" secondItem="cWY-Nu-OcU" secondAttribute="width" id="yDp-Mr-4En"/>
+                            <constraint firstItem="cWY-Nu-OcU" firstAttribute="top" secondItem="47U-6X-qus" secondAttribute="bottom" constant="30" id="zUa-CA-4oV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -664,7 +664,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd8-V9-lJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="245"/>
+            <point key="canvasLocation" x="561" y="254"/>
         </scene>
         <!--Card View Controller Scene-->
         <scene sceneID="05L-Ll-PBa">
@@ -803,12 +803,17 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUv-0w-8dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="157" y="962"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="1280" height="1706"/>
         <image name="bar" width="300" height="20"/>
         <image name="close" width="64" height="64"/>
+        <image name="decks" width="2100" height="1500"/>
+        <image name="friends" width="2100" height="1500"/>
+        <image name="new" width="2100" height="1500"/>
+        <image name="settings" width="2100" height="1500"/>
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
