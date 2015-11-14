@@ -11,13 +11,37 @@ import Parse
 
 class CardViewController: UIViewController {
     @IBOutlet weak var someLabel: UILabel!
+    
+    @IBOutlet weak var cardtext: UITextField!
     var cardView: UIView!
     var back: UIImageView!
     var front: UIImageView!
     
+    var searchResults=[String]()
+    
+    
     var showingBack = true
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentuser = PFUser.currentUser()!.username
+
+        let query = PFQuery(className: "Card")
+        query.whereKey("userid", equalTo:currentuser!)
+        
+        let scoreArrary = query.findObjects()
+        
+        
+        for object in scoreArrary!{
+            let name = object.objectForKey("def") as! String
+            
+            self.searchResults.append(name)
+
+        }
+
+        for object in searchResults{
+            self.cardtext.text = object
+        }
+        
         
         back = UIImageView(image: UIImage(named: "back.png"))
         back.frame = CGRectMake(0,0,350,200)
