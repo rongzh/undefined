@@ -7,32 +7,36 @@ provides-member:
 - ["C9ParseDemo20SignUpViewController", ""]
 provides-dynamic-lookup:
 - "signUpAction"
-- "passwordField"
-- "emailField"
 - "didReceiveMemoryWarning"
+- "emailField"
+- "passwordField"
 - "usernameField"
 - "viewDidLoad"
 depends-top-level:
-- "UITextField"
 - !private "<"
-- !private "dispatch_async"
-- !private "CGRectMake"
-- !private "!="
-- "AnyObject"
 - !private "UIActivityIndicatorView"
+- "BooleanLiteralType"
+- !private "Bool"
+- !private "NSError"
+- !private "NSCharacterSet"
+- "AnyObject"
+- "UIViewController"
+- !private "PFUser"
+- !private "CGRectMake"
+- !private "dispatch_async"
+- !private "UIAlertView"
+- "UITextField"
+- !private "Void"
+- !private "StringLiteralType"
+- !private "PFObject"
+- !private "!="
 - "SignUpViewController"
 - !private "dispatch_get_main_queue"
-- "BooleanLiteralType"
-- !private "NSCharacterSet"
-- !private "UIAlertView"
-- !private "Void"
-- "UIViewController"
 - !private "UIStoryboard"
-- !private "PFUser"
-- !private "StringLiteralType"
 depends-member:
 - !private ["PSs9AnyObject", "CGRectMake"]
 - !private ["PSs9AnyObject", "NSCharacterSet"]
+- !private ["PSs9AnyObject", "PFObject"]
 - !private ["PSs9AnyObject", "PFUser"]
 - !private ["PSs9AnyObject", "UIActivityIndicatorView"]
 - !private ["PSs9AnyObject", "UIAlertView"]
@@ -48,6 +52,8 @@ depends-member:
 - !private ["PSs9AnyObject", "password"]
 - ["PSs9AnyObject", "passwordField"]
 - !private ["PSs9AnyObject", "presentViewController"]
+- !private ["PSs9AnyObject", "saveInBackgroundWithBlock"]
+- !private ["PSs9AnyObject", "setObject"]
 - !private ["PSs9AnyObject", "show"]
 - ["PSs9AnyObject", "signUpAction"]
 - !private ["PSs9AnyObject", "signUpInBackgroundWithBlock"]
@@ -71,6 +77,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "CGRectMake"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSCharacterSet"]
+- !private ["PSs11CVarArgType", "PFObject"]
 - !private ["PSs11CVarArgType", "PFUser"]
 - !private ["PSs11CVarArgType", "UIActivityIndicatorView"]
 - !private ["PSs11CVarArgType", "UIAlertView"]
@@ -86,6 +93,8 @@ depends-member:
 - !private ["PSs11CVarArgType", "password"]
 - ["PSs11CVarArgType", "passwordField"]
 - !private ["PSs11CVarArgType", "presentViewController"]
+- !private ["PSs11CVarArgType", "saveInBackgroundWithBlock"]
+- !private ["PSs11CVarArgType", "setObject"]
 - !private ["PSs11CVarArgType", "show"]
 - ["PSs11CVarArgType", "signUpAction"]
 - !private ["PSs11CVarArgType", "signUpInBackgroundWithBlock"]
@@ -118,6 +127,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "CGRectMake"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "NSCharacterSet"]
+- !private ["PSs23CustomStringConvertible", "PFObject"]
 - !private ["PSs23CustomStringConvertible", "PFUser"]
 - !private ["PSs23CustomStringConvertible", "UIActivityIndicatorView"]
 - !private ["PSs23CustomStringConvertible", "UIAlertView"]
@@ -134,6 +144,8 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "password"]
 - ["PSs23CustomStringConvertible", "passwordField"]
 - !private ["PSs23CustomStringConvertible", "presentViewController"]
+- !private ["PSs23CustomStringConvertible", "saveInBackgroundWithBlock"]
+- !private ["PSs23CustomStringConvertible", "setObject"]
 - !private ["PSs23CustomStringConvertible", "show"]
 - ["PSs23CustomStringConvertible", "signUpAction"]
 - !private ["PSs23CustomStringConvertible", "signUpInBackgroundWithBlock"]
@@ -151,6 +163,7 @@ depends-member:
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSCharacterSet"]
+- !private ["PSs9Equatable", "PFObject"]
 - !private ["PSs9Equatable", "PFUser"]
 - !private ["PSs9Equatable", "UIActivityIndicatorView"]
 - !private ["PSs9Equatable", "UIAlertView"]
@@ -167,6 +180,8 @@ depends-member:
 - !private ["PSs9Equatable", "password"]
 - ["PSs9Equatable", "passwordField"]
 - !private ["PSs9Equatable", "presentViewController"]
+- !private ["PSs9Equatable", "saveInBackgroundWithBlock"]
+- !private ["PSs9Equatable", "setObject"]
 - !private ["PSs9Equatable", "show"]
 - ["PSs9Equatable", "signUpAction"]
 - !private ["PSs9Equatable", "signUpInBackgroundWithBlock"]
@@ -188,6 +203,7 @@ depends-member:
 - !private ["PSs8Hashable", "CGRectMake"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSCharacterSet"]
+- !private ["PSs8Hashable", "PFObject"]
 - !private ["PSs8Hashable", "PFUser"]
 - !private ["PSs8Hashable", "UIActivityIndicatorView"]
 - !private ["PSs8Hashable", "UIAlertView"]
@@ -204,6 +220,8 @@ depends-member:
 - !private ["PSs8Hashable", "password"]
 - ["PSs8Hashable", "passwordField"]
 - !private ["PSs8Hashable", "presentViewController"]
+- !private ["PSs8Hashable", "saveInBackgroundWithBlock"]
+- !private ["PSs8Hashable", "setObject"]
 - !private ["PSs8Hashable", "show"]
 - ["PSs8Hashable", "signUpAction"]
 - !private ["PSs8Hashable", "signUpInBackgroundWithBlock"]
@@ -238,6 +256,7 @@ depends-member:
 - !private ["CSo14NSCharacterSet", "whitespaceCharacterSet"]
 - !private ["PSo8NSCoding", "CGRectMake"]
 - !private ["PSo8NSCoding", "NSCharacterSet"]
+- !private ["PSo8NSCoding", "PFObject"]
 - !private ["PSo8NSCoding", "PFUser"]
 - !private ["PSo8NSCoding", "UIActivityIndicatorView"]
 - !private ["PSo8NSCoding", "UIAlertView"]
@@ -266,6 +285,7 @@ depends-member:
 - !private ["PSo9NSCopying", "whitespaceCharacterSet"]
 - !private ["PSo26NSExtensionRequestHandling", "CGRectMake"]
 - !private ["PSo26NSExtensionRequestHandling", "NSCharacterSet"]
+- !private ["PSo26NSExtensionRequestHandling", "PFObject"]
 - !private ["PSo26NSExtensionRequestHandling", "PFUser"]
 - !private ["PSo26NSExtensionRequestHandling", "UIActivityIndicatorView"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertView"]
@@ -286,8 +306,11 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "stringByTrimmingCharactersInSet"]
 - !private ["PSo16NSMutableCopying", "whitespaceCharacterSet"]
 - ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CGRectMake"]
 - !private ["CSo8NSObject", "NSCharacterSet"]
+- !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "PFObject"]
 - !private ["CSo8NSObject", "PFUser"]
 - !private ["CSo8NSObject", "UIActivityIndicatorView"]
 - !private ["CSo8NSObject", "UIAlertView"]
@@ -306,6 +329,8 @@ depends-member:
 - !private ["CSo8NSObject", "password"]
 - ["CSo8NSObject", "passwordField"]
 - !private ["CSo8NSObject", "presentViewController"]
+- !private ["CSo8NSObject", "saveInBackgroundWithBlock"]
+- !private ["CSo8NSObject", "setObject"]
 - !private ["CSo8NSObject", "show"]
 - ["CSo8NSObject", "signUpAction"]
 - !private ["CSo8NSObject", "signUpInBackgroundWithBlock"]
@@ -319,6 +344,7 @@ depends-member:
 - !private ["CSo8NSObject", "whitespaceCharacterSet"]
 - !private ["PSo16NSObjectProtocol", "CGRectMake"]
 - !private ["PSo16NSObjectProtocol", "NSCharacterSet"]
+- !private ["PSo16NSObjectProtocol", "PFObject"]
 - !private ["PSo16NSObjectProtocol", "PFUser"]
 - !private ["PSo16NSObjectProtocol", "UIActivityIndicatorView"]
 - !private ["PSo16NSObjectProtocol", "UIAlertView"]
@@ -334,6 +360,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "password"]
 - ["PSo16NSObjectProtocol", "passwordField"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
+- !private ["PSo16NSObjectProtocol", "saveInBackgroundWithBlock"]
+- !private ["PSo16NSObjectProtocol", "setObject"]
 - !private ["PSo16NSObjectProtocol", "show"]
 - ["PSo16NSObjectProtocol", "signUpAction"]
 - !private ["PSo16NSObjectProtocol", "signUpInBackgroundWithBlock"]
@@ -359,6 +387,8 @@ depends-member:
 - !private ["CSo8PFObject", "email"]
 - !private ["CSo8PFObject", "init"]
 - !private ["CSo8PFObject", "password"]
+- !private ["CSo8PFObject", "saveInBackgroundWithBlock"]
+- !private ["CSo8PFObject", "setObject"]
 - !private ["CSo8PFObject", "signUpInBackgroundWithBlock"]
 - !private ["CSo8PFObject", "username"]
 - !private ["PSo13PFSubclassing", "email"]
@@ -381,8 +411,11 @@ depends-member:
 - !private ["PSs12SequenceType", "SubSequence"]
 - !private ["PSs12SequenceType", "count"]
 - ["C9ParseDemo20SignUpViewController", "AnyObject"]
+- !private ["C9ParseDemo20SignUpViewController", "Bool"]
 - !private ["C9ParseDemo20SignUpViewController", "CGRectMake"]
 - !private ["C9ParseDemo20SignUpViewController", "NSCharacterSet"]
+- !private ["C9ParseDemo20SignUpViewController", "NSError"]
+- !private ["C9ParseDemo20SignUpViewController", "PFObject"]
 - !private ["C9ParseDemo20SignUpViewController", "PFUser"]
 - !private ["C9ParseDemo20SignUpViewController", "UIActivityIndicatorView"]
 - !private ["C9ParseDemo20SignUpViewController", "UIAlertView"]
@@ -408,6 +441,7 @@ depends-member:
 - !private ["PSs10Streamable", "stringByTrimmingCharactersInSet"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["SS", "characters"]
+- !private ["SS", "deinit"]
 - !private ["SS", "init"]
 - !private ["SS", "stringByTrimmingCharactersInSet"]
 - !private ["PSs30StringInterpolationConvertible", "characters"]
@@ -433,6 +467,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "CGRectMake"]
 - !private ["PSo21UIAppearanceContainer", "NSCharacterSet"]
+- !private ["PSo21UIAppearanceContainer", "PFObject"]
 - !private ["PSo21UIAppearanceContainer", "PFUser"]
 - !private ["PSo21UIAppearanceContainer", "UIActivityIndicatorView"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertView"]
@@ -454,6 +489,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["PSo18UIContentContainer", "CGRectMake"]
 - !private ["PSo18UIContentContainer", "NSCharacterSet"]
+- !private ["PSo18UIContentContainer", "PFObject"]
 - !private ["PSo18UIContentContainer", "PFUser"]
 - !private ["PSo18UIContentContainer", "UIActivityIndicatorView"]
 - !private ["PSo18UIContentContainer", "UIAlertView"]
@@ -482,6 +518,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo18UIFocusEnvironment", "CGRectMake"]
 - !private ["PSo18UIFocusEnvironment", "NSCharacterSet"]
+- !private ["PSo18UIFocusEnvironment", "PFObject"]
 - !private ["PSo18UIFocusEnvironment", "PFUser"]
 - !private ["PSo18UIFocusEnvironment", "UIActivityIndicatorView"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertView"]
@@ -503,8 +540,11 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo10UIKeyInput", "text"]
 - ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGRectMake"]
 - !private ["CSo11UIResponder", "NSCharacterSet"]
+- !private ["CSo11UIResponder", "NSError"]
+- !private ["CSo11UIResponder", "PFObject"]
 - !private ["CSo11UIResponder", "PFUser"]
 - !private ["CSo11UIResponder", "UIActivityIndicatorView"]
 - !private ["CSo11UIResponder", "UIAlertView"]
@@ -528,6 +568,7 @@ depends-member:
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo16UIStateRestoring", "CGRectMake"]
 - !private ["PSo16UIStateRestoring", "NSCharacterSet"]
+- !private ["PSo16UIStateRestoring", "PFObject"]
 - !private ["PSo16UIStateRestoring", "PFUser"]
 - !private ["PSo16UIStateRestoring", "UIActivityIndicatorView"]
 - !private ["PSo16UIStateRestoring", "UIAlertView"]
@@ -550,6 +591,7 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo18UITraitEnvironment", "CGRectMake"]
 - !private ["PSo18UITraitEnvironment", "NSCharacterSet"]
+- !private ["PSo18UITraitEnvironment", "PFObject"]
 - !private ["PSo18UITraitEnvironment", "PFUser"]
 - !private ["PSo18UITraitEnvironment", "UIActivityIndicatorView"]
 - !private ["PSo18UITraitEnvironment", "UIAlertView"]
@@ -575,8 +617,11 @@ depends-member:
 - !private ["CSo6UIView", "stopAnimating"]
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CGRectMake"]
 - !private ["CSo16UIViewController", "NSCharacterSet"]
+- !private ["CSo16UIViewController", "NSError"]
+- !private ["CSo16UIViewController", "PFObject"]
 - !private ["CSo16UIViewController", "PFUser"]
 - !private ["CSo16UIViewController", "UIActivityIndicatorView"]
 - !private ["CSo16UIViewController", "UIAlertView"]

@@ -12,13 +12,18 @@ import Parse
 class CardViewController: UIViewController {
     @IBOutlet weak var someLabel: UILabel!
     
+    @IBAction func nextbutton(sender: AnyObject) {
+        nextcalled()
+    }
     
     @IBOutlet weak var cardtext: UITextField!
+    @IBOutlet weak var textbox: UIView!
     var cardView: UIView!
-    @IBOutlet var front: UIImageView!
-    @IBOutlet var back: UIImageView!
-    var searchResults=[String]()
-    
+    var searchResults_front=[String]()
+    var searchResults_back=[String]()
+    var front:UIImageView!
+    var back:UIImageView!
+    var index = 0
     
     var showingBack = true
     override func viewDidLoad() {
@@ -33,31 +38,31 @@ class CardViewController: UIViewController {
         
         for object in scoreArrary!{
             let name = object.objectForKey("def") as! String
-            
-            self.searchResults.append(name)
+            let b_name = object.objectForKey("back") as! String
+            self.searchResults_front.append(name)
+            self.searchResults_back.append(b_name)
 
         }
-
-        for object in searchResults{
-            self.cardtext.text = object
-        }
+            self.cardtext.text = self.searchResults_front[index]
         
         
-        //back = UIImageView(image: UIImage(named: "back.png"))
-        //back.frame = CGRectMake(0,0,350,200)
-        //front = UIImageView(image: UIImage(named: "front.png"))
-        //front.frame = CGRectMake(0,0,350,200)
+        back = UIImageView(image: UIImage(named: "back.png"))
+        back.frame = CGRectMake(1,25,350,200)
+        front = UIImageView(image: UIImage(named: "front.png"))
+        front.frame = CGRectMake(1,25,350,200)
         
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
         singleTap.numberOfTapsRequired = 1
         
-        let rect = CGRectMake(20, 20, back.image!.size.width, back.image!.size.height)
+        let rect = CGRectMake(1, 25, 350, 230)
         cardView = UIView(frame: rect)
         cardView.addGestureRecognizer(singleTap)
         cardView.userInteractionEnabled = true
-        cardView.addSubview(back)
+        cardView.addSubview(front)
         
         view.addSubview(cardView)        // Show the current visitor's username
+        [self.view .insertSubview(textbox, aboveSubview: cardView)]
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,13 +71,26 @@ class CardViewController: UIViewController {
     }
     func tapped() {
         if (showingBack) {
-            UIView.transitionFromView(back, toView: front, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+            UIView.transitionFromView(back, toView: front, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             showingBack = false
+            self.cardtext.text = self.searchResults_front[index]
         } else {
-            UIView.transitionFromView(front, toView: back, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+            UIView.transitionFromView(front, toView: back, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             showingBack = true
+            self.cardtext.text = self.searchResults_back[index]
         }
         
+    }
+    
+    func nextcalled(){
+        if(showingBack){
+            UIView.transitionFromView(back, toView: front, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+            showingBack = false
+        }
+        if (index + 1 < searchResults_front.count){
+            index++
+        }
+        self.cardtext.text = self.searchResults_front[index]
     }
     /*
     // MARK: - Navigation

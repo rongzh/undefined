@@ -91,6 +91,31 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@class UISearchBar;
+@class UILabel;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC9ParseDemo23AddFriendViewController")
+@interface AddFriendViewController : UIViewController <UIBarPositioningDelegate, UITableViewDelegate, UIScrollViewDelegate, UISearchBarDelegate, UITableViewDataSource>
+@property (nonatomic, weak) IBOutlet UITableView * __null_unspecified myTable;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified userNameLabel;
+@property (nonatomic, weak) IBOutlet UISearchBar * __null_unspecified mySearchBar;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)searchBarSearchButtonClicked:(UISearchBar * __nonnull)searchBar;
+- (void)searchBarCancelButtonClicked:(UISearchBar * __nonnull)searchBar;
+- (IBAction)refreshButtonTapped:(id __nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIApplication;
 @class NSObject;
@@ -107,9 +132,55 @@ SWIFT_CLASS("_TtC9ParseDemo11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
-@class NSBundle;
-@class NSCoder;
+@class UIView;
+@class UIImageView;
+@class UITextField;
+
+SWIFT_CLASS("_TtC9ParseDemo18CardViewController")
+@interface CardViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified someLabel;
+- (IBAction)nextbutton:(id __nonnull)sender;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified cardtext;
+@property (nonatomic, weak) IBOutlet UIView * __null_unspecified textbox;
+@property (nonatomic, strong) UIView * __null_unspecified cardView;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults_front;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults_back;
+@property (nonatomic, strong) UIImageView * __null_unspecified front;
+@property (nonatomic, strong) UIImageView * __null_unspecified back;
+@property (nonatomic) NSInteger index;
+@property (nonatomic) BOOL showingBack;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)tapped;
+- (void)nextcalled;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9ParseDemo23DashBoardViewController")
+@interface DashBoardViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified usernameLabel;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC9ParseDemo20FriendViewController")
+@interface FriendViewController : UIViewController <UIBarPositioningDelegate, UISearchBarDelegate, UIScrollViewDelegate, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified userNameLabel;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified friendname;
+@property (nonatomic, weak) IBOutlet UITableView * __null_unspecified myTable;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull friendsArray;
+- (void)viewDidLoad;
+- (void)retrieveFriends;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC9ParseDemo18HomeViewController")
 @interface HomeViewController : UIViewController
@@ -123,7 +194,6 @@ SWIFT_CLASS("_TtC9ParseDemo18HomeViewController")
 @end
 
 @class UIStoryboardSegue;
-@class UITextField;
 
 SWIFT_CLASS("_TtC9ParseDemo19LoginViewController")
 @interface LoginViewController : UIViewController

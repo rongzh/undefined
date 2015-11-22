@@ -139,15 +139,20 @@ SWIFT_CLASS("_TtC9ParseDemo11AppDelegate")
 SWIFT_CLASS("_TtC9ParseDemo18CardViewController")
 @interface CardViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified someLabel;
+- (IBAction)nextbutton:(id __nonnull)sender;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified cardtext;
+@property (nonatomic, weak) IBOutlet UIView * __null_unspecified textbox;
 @property (nonatomic, strong) UIView * __null_unspecified cardView;
-@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified front;
-@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified back;
-@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults_front;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull searchResults_back;
+@property (nonatomic, strong) UIImageView * __null_unspecified front;
+@property (nonatomic, strong) UIImageView * __null_unspecified back;
+@property (nonatomic) NSInteger index;
 @property (nonatomic) BOOL showingBack;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)tapped;
+- (void)nextcalled;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

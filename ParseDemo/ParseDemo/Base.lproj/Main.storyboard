@@ -636,35 +636,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-8y-DPK">
-                                <rect key="frame" x="108" y="109" width="274" height="151"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-z7-F9c">
+                                <rect key="frame" x="115" y="415" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-9y-c59">
+                                <rect key="frame" x="257" y="388" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextbutton:" destination="tcJ-56-XNp" eventType="touchUpInside" id="X1D-4c-P5p"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-8y-DPK">
+                                <rect key="frame" x="115" y="109" width="274" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-Jv-6Ez">
-                                        <rect key="frame" x="38" y="61" width="197" height="30"/>
+                                        <rect key="frame" x="38" y="0.0" width="197" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="qRi-Wt-0F8">
-                                <rect key="frame" x="86" y="103" width="308" height="174"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-z7-F9c">
-                                <rect key="frame" x="115" y="415" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="front" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-jg-dR7">
-                                <rect key="frame" x="86" y="103" width="308" height="174"/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I7L-8y-DPK" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="Jk8-X5-a2V"/>
+                            <constraint firstItem="I7L-8y-DPK" firstAttribute="top" secondItem="i5o-wV-dKn" secondAttribute="bottom" constant="70" id="tGX-za-nAS"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="back" destination="qRi-Wt-0F8" id="iGP-rt-S8X"/>
                         <outlet property="cardtext" destination="LrH-Jv-6Ez" id="VPm-d0-MB5"/>
-                        <outlet property="front" destination="TsM-jg-dR7" id="OyV-kT-y5f"/>
+                        <outlet property="textbox" destination="I7L-8y-DPK" id="k2I-sD-T1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNS-0P-IKY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -784,12 +788,10 @@
     </scenes>
     <resources>
         <image name="Image" width="1280" height="1706"/>
-        <image name="back" width="2208" height="1242"/>
         <image name="bar" width="300" height="20"/>
         <image name="close" width="64" height="64"/>
         <image name="deck" width="2100" height="1500"/>
         <image name="friends" width="2100" height="1500"/>
-        <image name="front" width="2208" height="1242"/>
         <image name="new" width="2100" height="1500"/>
         <image name="settings" width="2100" height="1500"/>
         <image name="user" width="126" height="126"/>
