@@ -12,11 +12,11 @@ import Parse
 class CardViewController: UIViewController {
     @IBOutlet weak var someLabel: UILabel!
     
+    
     @IBOutlet weak var cardtext: UITextField!
     var cardView: UIView!
-    var back: UIImageView!
-    var front: UIImageView!
-    
+    @IBOutlet var front: UIImageView!
+    @IBOutlet var back: UIImageView!
     var searchResults=[String]()
     
     
@@ -43,10 +43,10 @@ class CardViewController: UIViewController {
         }
         
         
-        back = UIImageView(image: UIImage(named: "back.png"))
-        back.frame = CGRectMake(0,0,350,200)
-        front = UIImageView(image: UIImage(named: "front.png"))
-        front.frame = CGRectMake(0,0,350,200)
+        //back = UIImageView(image: UIImage(named: "back.png"))
+        //back.frame = CGRectMake(0,0,350,200)
+        //front = UIImageView(image: UIImage(named: "front.png"))
+        //front.frame = CGRectMake(0,0,350,200)
         
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
         singleTap.numberOfTapsRequired = 1
@@ -69,7 +69,7 @@ class CardViewController: UIViewController {
             UIView.transitionFromView(back, toView: front, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             showingBack = false
         } else {
-            UIView.transitionFromView(front, toView: back, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+            UIView.transitionFromView(front, toView: back, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             showingBack = true
         }
         
