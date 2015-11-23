@@ -68,9 +68,9 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         
         
         back = UIImageView(image: UIImage(named: "back.png"))
-        back.frame = CGRectMake(1,25,350,200)
+        back.frame = CGRectMake(25,25,350,200)
         front = UIImageView(image: UIImage(named: "front.png"))
-        front.frame = CGRectMake(1,25,350,200)
+        front.frame = CGRectMake(25,25,350,200)
         
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
         singleTap.numberOfTapsRequired = 1

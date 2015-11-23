@@ -639,14 +639,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-z7-F9c">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-z7-F9c">
                                 <rect key="frame" x="235" y="247" width="35" height="30"/>
                                 <state key="normal" title="Dash"/>
                                 <connections>
                                     <segue destination="9B6-J3-lPL" kind="show" id="bOm-oo-4wS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-9y-c59">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-9y-c59">
                                 <rect key="frame" x="155" y="247" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -664,20 +664,32 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-b3-a2k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-b3-a2k">
                                 <rect key="frame" x="205" y="319" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-MB-r74">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-MB-r74">
                                 <rect key="frame" x="42" y="374" width="368" height="62"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Degree: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-uN-YCH">
+                                <rect key="frame" x="155" y="289" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3pF-uN-YCH" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="2nW-NV-Arz"/>
+                            <constraint firstItem="4dJ-9y-c59" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="5tR-De-qip"/>
+                            <constraint firstItem="WYG-b3-a2k" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="AEL-tD-XBq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f5d-MB-r74" secondAttribute="trailing" constant="25" id="F0e-Ll-dn0"/>
                             <constraint firstItem="I7L-8y-DPK" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="Jk8-X5-a2V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i3x-z7-F9c" secondAttribute="trailing" constant="25" id="P3F-42-GXY"/>
+                            <constraint firstItem="f5d-MB-r74" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="WTi-bd-LE8"/>
                             <constraint firstItem="I7L-8y-DPK" firstAttribute="top" secondItem="i5o-wV-dKn" secondAttribute="bottom" constant="70" id="tGX-za-nAS"/>
                         </constraints>
                     </view>
@@ -783,41 +795,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-JI-JEE">
-                                <rect key="frame" x="137" y="160" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-JI-JEE">
+                                <rect key="frame" x="137" y="119" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-L7-jqr">
-                                <rect key="frame" x="137" y="218" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
-                                <rect key="frame" x="163" y="433" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
+                                <rect key="frame" x="81" y="550" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="addcard:" destination="UPa-dq-4w4" eventType="touchUpInside" id="mJe-1g-Ida"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-97-XQh">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-97-XQh">
                                 <rect key="frame" x="75" y="346" width="220" height="70"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-PC-tbf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-PC-tbf">
                                 <rect key="frame" x="150" y="298" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
-                                <rect key="frame" x="170" y="483" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
+                                <rect key="frame" x="271" y="550" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="9B6-J3-lPL" kind="show" id="0yu-CL-MX0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Front:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndl-Gq-wrN">
+                                <rect key="frame" x="134" y="77" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-L7-jqr">
+                                <rect key="frame" x="137" y="230" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Definition:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wz-c3-04E">
+                                <rect key="frame" x="137" y="190" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YuA-O5-dZ9" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="3Vn-Sp-byZ"/>
+                            <constraint firstItem="uh1-L7-jqr" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="AtG-Ji-Xju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EFb-97-XQh" secondAttribute="trailing" constant="25" id="LdI-jl-API"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dSL-6l-Yco" secondAttribute="trailing" constant="25" id="V7p-Xm-syB"/>
+                            <constraint firstItem="ndl-Gq-wrN" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="drZ-CN-fL7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uh1-L7-jqr" secondAttribute="trailing" constant="25" id="f6q-dJ-cx8"/>
+                            <constraint firstItem="EFb-97-XQh" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="lEo-7Y-7b2"/>
+                            <constraint firstItem="Dss-PC-tbf" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="130" id="nQV-16-kLd"/>
+                            <constraint firstItem="6wz-c3-04E" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="rDC-E4-Q5t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jgC-JI-JEE" secondAttribute="trailing" constant="25" id="sXU-he-DJZ"/>
+                            <constraint firstItem="jgC-JI-JEE" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="vBD-RD-mDE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backinfo" destination="uh1-L7-jqr" id="tVT-lN-oDs"/>
@@ -873,6 +910,6 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bOm-oo-4wS"/>
+        <segue reference="0yu-CL-MX0"/>
     </inferredMetricsTieBreakers>
 </document>
