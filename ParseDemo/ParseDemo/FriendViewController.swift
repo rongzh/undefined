@@ -23,7 +23,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
     func retrieveFriends(){
-        var query:PFQuery = PFQuery(className: "User")
+        var query = PFQuery(className: "User")
         
         query.getObjectInBackgroundWithId("lZ4eHLhJex") {
             (fid1: PFObject?, error: NSError?) -> Void in

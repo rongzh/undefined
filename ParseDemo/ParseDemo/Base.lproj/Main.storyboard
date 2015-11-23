@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -572,7 +572,7 @@
                                 <animations/>
                                 <state key="normal" title="Button" image="new"/>
                                 <connections>
-                                    <segue destination="tcJ-56-XNp" kind="show" id="l4t-9a-7pZ"/>
+                                    <segue destination="UPa-dq-4w4" kind="show" id="LSh-MQ-71b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ing-iH-TWT">
@@ -591,6 +591,9 @@
                                 <rect key="frame" x="315" y="111" width="171" height="176"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="deck"/>
+                                <connections>
+                                    <segue destination="tcJ-56-XNp" kind="show" id="stc-aV-SCr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -637,11 +640,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-z7-F9c">
-                                <rect key="frame" x="115" y="415" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="235" y="247" width="35" height="30"/>
+                                <state key="normal" title="Dash"/>
+                                <connections>
+                                    <segue destination="9B6-J3-lPL" kind="show" id="bOm-oo-4wS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-9y-c59">
-                                <rect key="frame" x="257" y="388" width="32" height="30"/>
+                                <rect key="frame" x="155" y="247" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextbutton:" destination="tcJ-56-XNp" eventType="touchUpInside" id="X1D-4c-P5p"/>
@@ -650,7 +656,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-8y-DPK">
                                 <rect key="frame" x="115" y="109" width="274" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-Jv-6Ez">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-Jv-6Ez">
                                         <rect key="frame" x="38" y="0.0" width="197" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -658,6 +664,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-b3-a2k">
+                                <rect key="frame" x="205" y="319" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-MB-r74">
+                                <rect key="frame" x="42" y="374" width="368" height="62"/>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -668,12 +683,14 @@
                     </view>
                     <connections>
                         <outlet property="cardtext" destination="LrH-Jv-6Ez" id="VPm-d0-MB5"/>
+                        <outlet property="degree" destination="f5d-MB-r74" id="r0q-QE-RSU"/>
+                        <outlet property="myLabel" destination="WYG-b3-a2k" id="ahE-Si-qlG"/>
                         <outlet property="textbox" destination="I7L-8y-DPK" id="k2I-sD-T1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNS-0P-IKY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="1002"/>
+            <point key="canvasLocation" x="115" y="442"/>
         </scene>
         <!--AddFriends View Controller Scene-->
         <scene sceneID="Fml-JV-JRj">
@@ -729,7 +746,7 @@
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTK-NK-I92" id="Sjc-Uj-wDG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -754,6 +771,65 @@
             </objects>
             <point key="canvasLocation" x="489" y="1046"/>
         </scene>
+        <!--Add Card View Controller-->
+        <scene sceneID="fRq-Zb-kGe">
+            <objects>
+                <viewController id="UPa-dq-4w4" customClass="AddCardViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2zq-q6-HzF"/>
+                        <viewControllerLayoutGuide type="bottom" id="eJ4-L1-bla"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7x9-oi-gyI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-JI-JEE">
+                                <rect key="frame" x="137" y="160" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-L7-jqr">
+                                <rect key="frame" x="137" y="218" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
+                                <rect key="frame" x="163" y="433" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="addcard:" destination="UPa-dq-4w4" eventType="touchUpInside" id="mJe-1g-Ida"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-97-XQh">
+                                <rect key="frame" x="75" y="346" width="220" height="70"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-PC-tbf">
+                                <rect key="frame" x="150" y="298" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
+                                <rect key="frame" x="170" y="483" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="9B6-J3-lPL" kind="show" id="0yu-CL-MX0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="backinfo" destination="uh1-L7-jqr" id="tVT-lN-oDs"/>
+                        <outlet property="degree" destination="EFb-97-XQh" id="ky7-96-K7T"/>
+                        <outlet property="frontinfo" destination="jgC-JI-JEE" id="4YB-dB-KTs"/>
+                        <outlet property="myLabel" destination="Dss-PC-tbf" id="A3k-KS-Sjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NU6-CJ-Xe6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="557"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="ayE-Yq-5tf">
             <objects>
@@ -768,7 +844,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nkk-E2-TVy" id="NHg-np-g74">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -797,6 +873,6 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zhG-Ng-6YK"/>
+        <segue reference="bOm-oo-4wS"/>
     </inferredMetricsTieBreakers>
 </document>
