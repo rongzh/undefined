@@ -51,10 +51,8 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         for object in scoreArrary!{
             let name = object.objectForKey("def") as! String
             let b_name = object.objectForKey("back") as! String
-            var id = object.objectId as! AnyObject
+            let id = object.objectId as! AnyObject
             let degrees = object.objectForKey("degree") as! String
-            
-            //id = String(id)
             
  
             self.searchResults_front.append(name)
@@ -65,23 +63,37 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         }
             self.cardtext.text = self.searchResults_front[index]
             self.myLabel.text = self.searchResult_degrees[index]
+            let defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
+            degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
         
-        
+        let rect = CGRectMake((view.frame.size.width-300)/4, 20, 300, 210)
+        cardView = UIView(frame: rect)
         back = UIImageView(image: UIImage(named: "back.png"))
-        back.frame = CGRectMake(25,25,350,200)
+        back.frame = rect
+        back.contentMode = UIViewContentMode.ScaleAspectFit
+        
         front = UIImageView(image: UIImage(named: "front.png"))
-        front.frame = CGRectMake(25,25,350,200)
+        front.frame = rect
+        front.contentMode = UIViewContentMode.ScaleAspectFit
+        
         
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
         singleTap.numberOfTapsRequired = 1
         
-        let rect = CGRectMake(1, 25, 350, 230)
-        cardView = UIView(frame: rect)
         cardView.addGestureRecognizer(singleTap)
         cardView.userInteractionEnabled = true
         cardView.addSubview(front)
+        self.view.addSubview(cardView)
+        let horizontalConstraint = NSLayoutConstraint(item: cardView, attribute: NSLayoutAttribute.RightMargin, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.LeftMargin, multiplier: 1, constant: 100)
+        self.view.addConstraint(horizontalConstraint)
+//        let widthConstraint = NSLayoutConstraint(item: cardView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 350)
+//       self.view.addConstraint(widthConstraint)
+//        // view.addConstraint(widthConstraint) // also works
+//        
+//        let heightConstraint = NSLayoutConstraint(item: cardView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 200)
+//        self.view.addConstraint(heightConstraint)
+        // view.addConstraint(heightConstraint) // also works
         
-        view.addSubview(cardView)        // Show the current visitor's username
         [self.view .insertSubview(textbox, aboveSubview: cardView)]
         
     }
@@ -136,7 +148,8 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         }
         self.cardtext.text = self.searchResults_front[index]
         self.myLabel.text = self.searchResult_degrees[index]
-        
+        var defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
+        degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
     }
     
     func helper(){

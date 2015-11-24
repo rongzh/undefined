@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -654,10 +654,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-8y-DPK">
-                                <rect key="frame" x="115" y="109" width="274" height="30"/>
+                                <rect key="frame" x="115" y="109" width="195" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-Jv-6Ez">
-                                        <rect key="frame" x="38" y="0.0" width="197" height="30"/>
+                                        <rect key="frame" x="38" y="0.0" width="129" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -670,7 +670,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-MB-r74">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-MB-r74">
                                 <rect key="frame" x="42" y="374" width="368" height="62"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Degree: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-uN-YCH">
@@ -690,6 +690,7 @@
                             <constraint firstItem="I7L-8y-DPK" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="Jk8-X5-a2V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i3x-z7-F9c" secondAttribute="trailing" constant="25" id="P3F-42-GXY"/>
                             <constraint firstItem="f5d-MB-r74" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="WTi-bd-LE8"/>
+                            <constraint firstItem="GkA-Pd-PQk" firstAttribute="top" secondItem="f5d-MB-r74" secondAttribute="bottom" constant="20" id="st1-aX-su0"/>
                             <constraint firstItem="I7L-8y-DPK" firstAttribute="top" secondItem="i5o-wV-dKn" secondAttribute="bottom" constant="70" id="tGX-za-nAS"/>
                         </constraints>
                     </view>
@@ -758,7 +759,7 @@
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTK-NK-I92" id="Sjc-Uj-wDG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -800,14 +801,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
                                 <rect key="frame" x="81" y="550" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="addcard:" destination="UPa-dq-4w4" eventType="touchUpInside" id="mJe-1g-Ida"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-97-XQh">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-97-XQh">
                                 <rect key="frame" x="75" y="346" width="220" height="70"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-PC-tbf">
@@ -816,7 +817,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
                                 <rect key="frame" x="271" y="550" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -847,13 +848,16 @@
                             <constraint firstItem="uh1-L7-jqr" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="AtG-Ji-Xju"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EFb-97-XQh" secondAttribute="trailing" constant="25" id="LdI-jl-API"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dSL-6l-Yco" secondAttribute="trailing" constant="25" id="V7p-Xm-syB"/>
+                            <constraint firstItem="eJ4-L1-bla" firstAttribute="top" secondItem="YuA-O5-dZ9" secondAttribute="bottom" constant="10" id="ViF-xF-Tkn"/>
                             <constraint firstItem="ndl-Gq-wrN" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="drZ-CN-fL7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uh1-L7-jqr" secondAttribute="trailing" constant="25" id="f6q-dJ-cx8"/>
+                            <constraint firstItem="dSL-6l-Yco" firstAttribute="top" secondItem="EFb-97-XQh" secondAttribute="bottom" constant="30" id="kKx-qF-tCs"/>
                             <constraint firstItem="EFb-97-XQh" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="lEo-7Y-7b2"/>
                             <constraint firstItem="Dss-PC-tbf" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="130" id="nQV-16-kLd"/>
                             <constraint firstItem="6wz-c3-04E" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="rDC-E4-Q5t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jgC-JI-JEE" secondAttribute="trailing" constant="25" id="sXU-he-DJZ"/>
                             <constraint firstItem="jgC-JI-JEE" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="vBD-RD-mDE"/>
+                            <constraint firstItem="eJ4-L1-bla" firstAttribute="top" secondItem="dSL-6l-Yco" secondAttribute="bottom" constant="10" id="xeB-iZ-Vwe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -881,7 +885,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nkk-E2-TVy" id="NHg-np-g74">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -910,6 +914,6 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0yu-CL-MX0"/>
+        <segue reference="bOm-oo-4wS"/>
     </inferredMetricsTieBreakers>
 </document>
