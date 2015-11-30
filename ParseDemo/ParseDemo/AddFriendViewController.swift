@@ -11,8 +11,7 @@ import Parse
 
 class AddFriendViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     @IBOutlet weak var myTable: UITableView!
-    @IBOutlet weak var userNameLabel: UILabel!
-    
+   
     @IBOutlet weak var mySearchBar: UISearchBar!
     
     var searchResults=[String]()
@@ -22,6 +21,7 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
         
         // Show the current visitor's username
         
+        // fill the cache of a user's followees
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,27 +36,27 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let myCell = tableView.dequeueReusableCellWithIdentifier("myCell",forIndexPath: indexPath) as! UITableViewCell
+        let myCell = tableView.dequeueReusableCellWithIdentifier("myCell",forIndexPath: indexPath)
         
-        myCell.textLabel?.text = searchResults[indexPath.row]
+        myCell.textLabel!.text = searchResults[indexPath.row] as? String
+         myCell.textLabel!.adjustsFontSizeToFitWidth = true;
         
         return myCell
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar){
         mySearchBar.resignFirstResponder()
-        
-        var nameQuery = PFQuery(className: "Users")
+        let nameQuery = PFQuery(className: "Users")
         nameQuery.whereKey("username",containsString:searchBar.text)
         
-        var query = PFQuery.orQueryWithSubqueries([nameQuery])
+        let query = PFQuery.orQueryWithSubqueries([nameQuery])
         
         query.findObjectsInBackgroundWithBlock{
             (results:[AnyObject]?,error:NSError?) -> Void in
             
             if error != nil
             {
-                var myAlert = UIAlertController(title:"Alert",message:error?.localizedDescription,preferredStyle: UIAlertControllerStyle.Alert)
+                let myAlert = UIAlertController(title:"Alert",message:error?.localizedDescription,preferredStyle: UIAlertControllerStyle.Alert)
                 
                 let okAction = UIAlertAction(title:"Ok",style:UIAlertActionStyle.Default,handler: nil)
                 
@@ -86,13 +86,14 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
     func searchBarCancelButtonClicked(searchBar: UISearchBar){
         mySearchBar.resignFirstResponder()
         mySearchBar.text=""
-        
+        mySearchBar.setShowsCancelButton(false, animated: true)
 
     }
 
     @IBAction func refreshButtonTapped(sender: AnyObject) {
         mySearchBar.resignFirstResponder()
         mySearchBar.text=""
+        mySearchBar.setShowsCancelButton(false, animated: true)
         searchResults.removeAll(keepCapacity: false)
         myTable.reloadData()
     }
