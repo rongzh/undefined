@@ -18,8 +18,8 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Show the current visitor's username
+        let nib = UINib(nibName: "viewTblCell", bundle: nil)
+        myTable.registerNib(nib,forCellReuseIdentifier:"cell")
         
         // fill the cache of a user's followees
     }
@@ -36,9 +36,9 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let myCell = tableView.dequeueReusableCellWithIdentifier("myCell",forIndexPath: indexPath)
+        let myCell:TblCell = self.myTable.dequeueReusableCellWithIdentifier("cell",forIndexPath: indexPath) as! TblCell
         
-        myCell.textLabel!.text = searchResults[indexPath.row] as? String
+        myCell.fname!.text = searchResults[indexPath.row]
          myCell.textLabel!.adjustsFontSizeToFitWidth = true;
         
         return myCell
@@ -48,7 +48,25 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
         mySearchBar.resignFirstResponder()
         let nameQuery = PFQuery(className: "Users")
         nameQuery.whereKey("username",containsString:searchBar.text)
-        
+        let fQuery = PFQuery(className: "Friends")
+        let current = PFUser.currentUser()!.username
+        fQuery.whereKey("fid1", containsString: searchBar.text)
+        fQuery.whereKey("fid2",  equalTo: current!)
+        var existf=[String]()
+
+        fQuery.findObjectsInBackgroundWithBlock{
+            (results:[AnyObject]?,error:NSError?) -> Void in
+            if error != nil
+            {}
+            if let objects = results as? [PFObject]{
+                for object in objects{
+                    let name = object.objectForKey("fid1") as! String
+                    existf.append(name)
+                }
+            }
+
+        }
+       
         let query = PFQuery.orQueryWithSubqueries([nameQuery])
         
         query.findObjectsInBackgroundWithBlock{
@@ -71,8 +89,9 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
                 
                 for object in objects{
                     let name = object.objectForKey("username") as! String
-                    
-                    self.searchResults.append(name)
+                    if (!existf.contains(name)){
+                        self.searchResults.append(name)
+                    }
                 }
                 
                 dispatch_async(dispatch_get_main_queue()){

@@ -136,18 +136,28 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-42-f86">
-                                <rect key="frame" x="28" y="105" width="97" height="30"/>
+                                <rect key="frame" x="28" y="105" width="95" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-TD-YXW">
-                                <rect key="frame" x="48" y="198" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="198" width="600" height="402"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="uY8-4V-V0Q"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="45" id="Qzh-37-UGB">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qzh-37-UGB" id="dCb-Wy-yQO">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NC-U1-4Ct">
                                 <rect key="frame" x="132" y="48" width="30" height="30"/>
@@ -160,6 +170,9 @@
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TgO-TD-YXW" secondAttribute="trailing" constant="10" id="1xY-ib-7sX"/>
+                            <constraint firstItem="TgO-TD-YXW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leadingMargin" constant="10" id="EKk-dP-ZyN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TgO-TD-YXW" secondAttribute="trailing" constant="10" id="NOB-aS-YC7"/>
                             <constraint firstItem="TgO-TD-YXW" firstAttribute="top" secondItem="qpN-42-f86" secondAttribute="bottom" id="Uqw-Ab-omG"/>
                             <constraint firstAttribute="trailing" secondItem="TgO-TD-YXW" secondAttribute="trailing" id="gB5-vY-7Uq"/>
                             <constraint firstItem="TgO-TD-YXW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leading" id="pCT-6w-qob"/>
@@ -771,22 +784,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTK-NK-I92" id="Sjc-Uj-wDG">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-jo-dRT">
-                                                    <rect key="frame" x="553" y="6" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="okv-vQ-AvS"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="addfriend"/>
-                                                    <state key="selected" image="close"/>
-                                                </button>
-                                            </subviews>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstItem="vWQ-jo-dRT" firstAttribute="top" secondItem="Sjc-Uj-wDG" secondAttribute="topMargin" constant="-2" id="XgS-KO-OHN"/>
-                                                <constraint firstItem="vWQ-jo-dRT" firstAttribute="centerY" secondItem="Sjc-Uj-wDG" secondAttribute="centerY" id="h7B-gR-3SH"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vWQ-jo-dRT" secondAttribute="trailing" constant="9" id="o4c-NJ-vF6"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <accessibility key="accessibilityConfiguration">
@@ -959,7 +957,6 @@
     </scenes>
     <resources>
         <image name="Image" width="1280" height="1706"/>
-        <image name="addfriend" width="225" height="225"/>
         <image name="bar" width="300" height="20"/>
         <image name="close" width="64" height="64"/>
         <image name="deck" width="2100" height="1500"/>
@@ -969,6 +966,6 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7il-yF-g8H"/>
+        <segue reference="zhG-Ng-6YK"/>
     </inferredMetricsTieBreakers>
 </document>

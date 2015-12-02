@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3D1AA61C0EA32F002243F8 /* viewTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */; };
+		5B3D1AA81C0EA442002243F8 /* TblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D1AA71C0EA442002243F8 /* TblCell.swift */; };
 		5B6B05DF1BF1A5D700661D46 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */; };
 		5B6B05E11BF1AA5900661D46 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B05E01BF1AA5900661D46 /* CardViewController.swift */; };
 		5B7524691BE450A200C96BCF /* parse-library-1.9.1 in Resources */ = {isa = PBXBuildFile; fileRef = 5B7524681BE450A200C96BCF /* parse-library-1.9.1 */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewTblCell.xib; sourceTree = "<group>"; };
+		5B3D1AA71C0EA442002243F8 /* TblCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TblCell.swift; sourceTree = "<group>"; };
 		5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		5B6B05E01BF1AA5900661D46 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		5B7524681BE450A200C96BCF /* parse-library-1.9.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.9.1"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				5B6B05E01BF1AA5900661D46 /* CardViewController.swift */,
 				ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */,
 				ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */,
+				5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */,
+				5B3D1AA71C0EA442002243F8 /* TblCell.swift */,
 				ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */,
 				E02347571B6BE242004F2DBE /* ResetPasswordViewController.swift */,
 				E02347151B677CD3004F2DBE /* Images.xcassets */,
@@ -289,6 +295,7 @@
 				E02347141B677CD3004F2DBE /* Main.storyboard in Resources */,
 				E02347191B677CD3004F2DBE /* LaunchScreen.xib in Resources */,
 				E02347161B677CD3004F2DBE /* Images.xcassets in Resources */,
+				5B3D1AA61C0EA32F002243F8 /* viewTblCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD0C4D21BEE56CB00630E46 /* FriendViewController.swift in Sources */,
+				5B3D1AA81C0EA442002243F8 /* TblCell.swift in Sources */,
 				ACD0C4D41BEE595E00630E46 /* AddFriendViewController.swift in Sources */,
 				E02347601B6BE423004F2DBE /* LoginViewController.swift in Sources */,
 				E02347581B6BE242004F2DBE /* ResetPasswordViewController.swift in Sources */,
