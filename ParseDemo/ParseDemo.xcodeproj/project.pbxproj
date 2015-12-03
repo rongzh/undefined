@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1EA0C71C0FCD080040F228 /* AddFolderPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EA0C61C0FCD080040F228 /* AddFolderPopUpViewController.swift */; };
+		5B1EA0C91C0FCEE90040F228 /* AddFolderPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1EA0C81C0FCEE90040F228 /* AddFolderPopUp.xib */; };
 		5B3D1AA61C0EA32F002243F8 /* viewTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */; };
 		5B3D1AA81C0EA442002243F8 /* TblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D1AA71C0EA442002243F8 /* TblCell.swift */; };
 		5B6B05DF1BF1A5D700661D46 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1EA0C61C0FCD080040F228 /* AddFolderPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFolderPopUpViewController.swift; sourceTree = "<group>"; };
+		5B1EA0C81C0FCEE90040F228 /* AddFolderPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFolderPopUp.xib; sourceTree = "<group>"; };
 		5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewTblCell.xib; sourceTree = "<group>"; };
 		5B3D1AA71C0EA442002243F8 /* TblCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TblCell.swift; sourceTree = "<group>"; };
 		5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E023470E1B677CD3004F2DBE /* AppDelegate.swift */,
+				5B1EA0C61C0FCD080040F228 /* AddFolderPopUpViewController.swift */,
 				E02347121B677CD3004F2DBE /* Main.storyboard */,
 				E023475F1B6BE423004F2DBE /* LoginViewController.swift */,
 				5B6B05DE1BF1A5D700661D46 /* DashBoardViewController.swift */,
@@ -155,6 +160,7 @@
 				ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */,
 				ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */,
 				5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */,
+				5B1EA0C81C0FCEE90040F228 /* AddFolderPopUp.xib */,
 				5B3D1AA71C0EA442002243F8 /* TblCell.swift */,
 				ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */,
 				E02347571B6BE242004F2DBE /* ResetPasswordViewController.swift */,
@@ -294,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1EA0C91C0FCEE90040F228 /* AddFolderPopUp.xib in Resources */,
 				5B7524691BE450A200C96BCF /* parse-library-1.9.1 in Resources */,
 				E02347141B677CD3004F2DBE /* Main.storyboard in Resources */,
 				E02347191B677CD3004F2DBE /* LaunchScreen.xib in Resources */,
@@ -327,6 +334,7 @@
 				5BFD65161C0FA072009813DE /* FolderViewController.swift in Sources */,
 				E023470F1B677CD3004F2DBE /* AppDelegate.swift in Sources */,
 				E023475E1B6BE32A004F2DBE /* HomeViewController.swift in Sources */,
+				5B1EA0C71C0FCD080040F228 /* AddFolderPopUpViewController.swift in Sources */,
 				5B6B05DF1BF1A5D700661D46 /* DashBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

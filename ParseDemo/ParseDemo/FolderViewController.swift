@@ -11,6 +11,7 @@ import Parse
 
 class FolderViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     @IBOutlet weak var usernameLabel: UITextField!
+    var popViewController : AddFolderPopUpViewController!
     
     @IBOutlet weak var MyTable: UITableView!
     @IBAction func addCalled(sender: AnyObject) {
@@ -37,7 +38,14 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
         return myCell
     }
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         MyTable.delegate = self
@@ -65,12 +73,19 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         
     }
+    @IBAction func ShowPopUp(sender: AnyObject) {
+        let bundle = NSBundle(forClass: AddFolderPopUpViewController.self)
+        self.popViewController = AddFolderPopUpViewController(nibName: "AddFolderPopUp", bundle: nil)
+        //self.popViewController.title = "This is a popup view"
+         self.popViewController.showInView(self.view,animated:true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+   
     /*
     // MARK: - Navigation
     
