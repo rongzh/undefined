@@ -62,6 +62,29 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         
         return myCell
     }
+
+     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .Destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            self.searchResults.removeAtIndex(indexPath.row)
+            // remove the deleted item from the `UITableView`
+            self.myTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        
+        let share = UITableViewRowAction(style: .Normal, title: "Share") { (action, indexPath) in
+            // share item at indexPath
+        }
+        
+        share.backgroundColor = UIColor.blueColor()
+        
+        return [delete, share]
+    }
+
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        return true
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "CardViewController"
         {

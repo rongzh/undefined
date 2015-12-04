@@ -776,7 +776,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Start" id="GnB-Hf-nHE">
                                             <connections>
-                                                <segue destination="tcJ-56-XNp" kind="show" identifier="CardViewController" id="hnl-jn-Ip4"/>
+                                                <segue destination="tcJ-56-XNp" kind="show" identifier="CardViewController" id="LTT-3z-HXD"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -792,7 +792,8 @@
                             <constraint firstItem="9Uo-eu-9ef" firstAttribute="leading" secondItem="v95-jK-vlC" secondAttribute="leadingMargin" id="yi5-hB-mcI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fWY-0Q-UYB"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myTable" destination="9Uo-eu-9ef" id="zfw-yy-2uW"/>
                     </connections>
@@ -962,7 +963,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FolderName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzZ-pC-zyX">
                                 <rect key="frame" x="28" y="492" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Max-NJ-DhC">
@@ -1123,7 +1124,7 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pYg-nG-ffc"/>
-        <segue reference="0AV-wd-BkS"/>
+        <segue reference="iCI-tb-35v"/>
+        <segue reference="hmo-IP-AcU"/>
     </inferredMetricsTieBreakers>
 </document>
