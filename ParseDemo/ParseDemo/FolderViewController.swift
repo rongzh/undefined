@@ -73,7 +73,17 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         
     }
-    @IBAction func ShowPopUp(sender: AnyObject) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "CardListViewController"
+        {
+            let detailViewController = ((segue.destinationViewController) as! CardListViewController)
+            let indexPath = self.MyTable.indexPathForSelectedRow!
+            let foldername = foldersArray[indexPath.row]
+            detailViewController.foldername = foldername
+            print(foldername)
+        }
+    }
+    @IBAction func ShowPopUp(sender: UIBarButtonItem) {
         let bundle = NSBundle(forClass: AddFolderPopUpViewController.self)
         self.popViewController = AddFolderPopUpViewController(nibName: "AddFolderPopUp", bundle: nil)
         //self.popViewController.title = "This is a popup view"

@@ -24,6 +24,7 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     var searchResults_back=[String]()
     var searchResult_id = [String]()
     var searchResult_degrees = [String]()
+    var foldername = String()
     var globalDegree = "0"
     
     var front:UIImageView!
@@ -39,11 +40,12 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         super.viewDidLoad()
         degree.dataSource = self
         degree.delegate = self
-
         let currentuser = PFUser.currentUser()!.username
-
+        
+        
         let query = PFQuery(className: "Card")
         query.whereKey("userid", equalTo:currentuser!)
+        query.whereKey("foldername", equalTo:foldername)
         
         let scoreArrary = query.findObjects()
         
@@ -175,17 +177,20 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return degreePicker.count
+
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return degreePicker[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == degreePicker{
         myLabel.text = degreePicker[row]
+        }
     }
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = degreePicker[row]
+        var titleData = degreePicker[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blueColor()])
         return myTitle
     }
