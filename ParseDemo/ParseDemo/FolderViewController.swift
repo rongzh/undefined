@@ -33,8 +33,14 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let myCell = self.MyTable.dequeueReusableCellWithIdentifier("Cell",forIndexPath: indexPath)
-        
-        myCell.textLabel?.text = foldersArray[indexPath.row]
+        let current = PFUser.currentUser()!.username
+        let fQuery = PFQuery(className: "Card")
+        fQuery.whereKey("userid",  equalTo: current!)
+        fQuery.whereKey("foldername",  equalTo: foldersArray[indexPath.row])
+        print(foldersArray[indexPath.row])
+        let scoreArrary = fQuery.findObjects()
+        var c = scoreArrary!.count;
+        myCell.textLabel?.text = foldersArray[indexPath.row] + "(" + String(c) + " Card)"
         return myCell
     }
 

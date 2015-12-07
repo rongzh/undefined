@@ -12,6 +12,7 @@ import Parse
 class CardListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
      @IBOutlet weak var myTable: UITableView!
     var searchResults=[String]()
+    var idResults=[String]()
     var foldername = String()
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,10 +35,17 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         let scoreArrary = query.findObjects()
         
         
-        for object in scoreArrary!{
-            let name = object.objectForKey("def") as! String
-            
+        for object1 in scoreArrary!{
+            let name = object1.objectForKey("def") as! String
+            let id = String(object1.objectId) as String
             self.searchResults.append(name)
+            print(id)
+            let index1 = id.startIndex.advancedBy(10)
+            let substring1 = id.substringFromIndex(index1)
+            let index2 = substring1.startIndex.advancedBy(10)
+            let substring2 = substring1.substringToIndex(index2)
+            print(substring2)
+            self.idResults.append(substring2)
             
         }
 
@@ -66,6 +74,14 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
      func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .Destructive, title: "Delete") { (action, indexPath) in
             // delete item at indexPath
+           let query = PFQuery(className: "Card")
+            query.whereKey("objectId", equalTo: self.idResults[indexPath.row])
+            let scoreArrary = query.findObjects()
+            
+            let object = scoreArrary![0]
+            object.deleteInBackground();
+            print("deleted")
+            
             self.searchResults.removeAtIndex(indexPath.row)
             // remove the deleted item from the `UITableView`
             self.myTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)

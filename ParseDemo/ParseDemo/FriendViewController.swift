@@ -30,8 +30,11 @@ class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let myCell = self.myTable.dequeueReusableCellWithIdentifier("Cell",forIndexPath: indexPath)
-        
-        myCell.textLabel?.text = friendsArray[indexPath.row]
+        let fQuery = PFQuery(className: "Card")
+        fQuery.whereKey("userid",  equalTo: friendsArray[indexPath.row])
+        let scoreArrary = fQuery.findObjects()
+        var c = scoreArrary!.count;
+        myCell.textLabel?.text = friendsArray[indexPath.row] + " (" + String(c) + " Card)"
         return myCell
     }
     
