@@ -18,6 +18,7 @@
 		5B75246D1BE4514300C96BCF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B75246C1BE4514300C96BCF /* libsqlite3.tbd */; };
 		5BC319C01C1148C300490A8E /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC319BF1C1148C300490A8E /* CardListViewController.swift */; };
 		5BFD65161C0FA072009813DE /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD65151C0FA072009813DE /* FolderViewController.swift */; };
+		AC6B32931C1944F40007BA70 /* ShareCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B32921C1944F40007BA70 /* ShareCardViewController.swift */; };
 		ACBD15481C027DBD00D0E547 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */; };
 		ACD0C4D21BEE56CB00630E46 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */; };
 		ACD0C4D41BEE595E00630E46 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */; };
@@ -66,6 +67,7 @@
 		5B75246C1BE4514300C96BCF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5BC319BF1C1148C300490A8E /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		5BFD65151C0FA072009813DE /* FolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
+		AC6B32921C1944F40007BA70 /* ShareCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCardViewController.swift; sourceTree = "<group>"; };
 		ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				5B6B05E01BF1AA5900661D46 /* CardViewController.swift */,
 				ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */,
 				ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */,
+				AC6B32921C1944F40007BA70 /* ShareCardViewController.swift */,
 				5B3D1AA51C0EA32F002243F8 /* viewTblCell.xib */,
 				5B1EA0C81C0FCEE90040F228 /* AddFolderPopUp.xib */,
 				5B3D1AA71C0EA442002243F8 /* TblCell.swift */,
@@ -332,6 +335,7 @@
 				E02347601B6BE423004F2DBE /* LoginViewController.swift in Sources */,
 				E02347581B6BE242004F2DBE /* ResetPasswordViewController.swift in Sources */,
 				ACBD15481C027DBD00D0E547 /* AddCardViewController.swift in Sources */,
+				AC6B32931C1944F40007BA70 /* ShareCardViewController.swift in Sources */,
 				5BC319C01C1148C300490A8E /* CardListViewController.swift in Sources */,
 				E02347541B6A50F6004F2DBE /* SignUpViewController.swift in Sources */,
 				5B6B05E11BF1AA5900661D46 /* CardViewController.swift in Sources */,

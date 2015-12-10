@@ -14,7 +14,7 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
     var searchResults=[String]()
     var idResults=[String]()
     var foldername = String()
-    
+    var cardforshare = String()
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -89,6 +89,10 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         
         let share = UITableViewRowAction(style: .Normal, title: "Share") { (action, indexPath) in
             // share item at indexPath
+            self.cardforshare = self.idResults[indexPath.row]
+            let storyboard = UIStoryboard(name:"Main",bundle:nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("Share Card View Controller") as! ShareCardViewController
+            self.presentViewController(vc,animated:true,completion:nil)
         }
         
         share.backgroundColor = UIColor.blueColor()
@@ -107,6 +111,15 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             let detailViewController = ((segue.destinationViewController) as! CardViewController)
             detailViewController.foldername = foldername
             print(foldername)
+        }
+        if segue.identifier == "Share Card View Controller"
+        {
+            let detailViewController = ((segue.destinationViewController) as! ShareCardViewController)
+            detailViewController.cardId = cardforshare
+            detailViewController.foldername = foldername
+            print("test here!!!!")
+            print(detailViewController.foldername)
+            
         }
     }
     /*

@@ -12,7 +12,6 @@ import Parse
 class FolderViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     @IBOutlet weak var usernameLabel: UITextField!
     var popViewController : AddFolderPopUpViewController!
-    var show = false
     @IBOutlet weak var MyTable: UITableView!
     //var hellotable : UITableView = MyTable
     
@@ -84,10 +83,6 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
             }
             
         }
-        if(show){
-            self.MyTable.reloadData()
-        }
-    
     }
     
     func reloadTableData(notification: NSNotification) {
@@ -105,9 +100,17 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
         self.MyTable.reloadData()
     }
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "CardListViewController"
+        {
+            let detailViewController = ((segue.destinationViewController) as! CardListViewController)
+            let indexPath = self.MyTable.indexPathForSelectedRow!
+            let foldername = foldersArray[indexPath.row]
+            detailViewController.foldername = foldername
+            print(foldername)
+        }
+    }
     @IBAction func ShowPopUp(sender: UIBarButtonItem) {
-        show = true
         let bundle = NSBundle(forClass: AddFolderPopUpViewController.self)
         self.popViewController = AddFolderPopUpViewController(nibName: "AddFolderPopUp", bundle: nil)
         //self.popViewController.title = "This is a popup view"
