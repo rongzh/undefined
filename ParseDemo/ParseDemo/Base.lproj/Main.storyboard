@@ -148,14 +148,16 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NC-U1-4Ct">
                                 <rect key="frame" x="550" y="48" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <segue destination="1dR-rn-7Rw" kind="show" id="WQ1-9v-nB8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmX-N4-GvW">
-                                <rect key="frame" x="9" y="48" width="76" height="30"/>
-                                <state key="normal" title="DashBoard"/>
+                                <rect key="frame" x="9" y="45" width="76" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="9B6-J3-lPL" kind="show" id="zhG-Ng-6YK"/>
                                 </connections>
@@ -501,12 +503,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY2-qY-GeU">
-                                <rect key="frame" x="561" y="20" width="30" height="30"/>
+                                <rect key="frame" x="561" y="20" width="19" height="18"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fhk-L4-cgu"/>
-                                    <constraint firstAttribute="width" constant="30" id="l0N-fb-E9d"/>
-                                </constraints>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="close"/>
                                 <userDefinedRuntimeAttributes>
@@ -633,6 +631,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-z7-F9c">
                                 <rect key="frame" x="235" y="247" width="35" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Dash"/>
                                 <connections>
                                     <segue destination="9B6-J3-lPL" kind="show" id="bOm-oo-4wS"/>
@@ -640,6 +639,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-9y-c59">
                                 <rect key="frame" x="155" y="247" width="32" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextbutton:" destination="tcJ-56-XNp" eventType="touchUpInside" id="X1D-4c-P5p"/>
@@ -649,7 +649,7 @@
                                 <rect key="frame" x="115" y="109" width="195" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-Jv-6Ez">
-                                        <rect key="frame" x="38" y="0.0" width="129" height="30"/>
+                                        <rect key="frame" x="58" y="0.0" width="129" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -678,7 +678,7 @@
                             <constraint firstItem="4dJ-9y-c59" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="5tR-De-qip"/>
                             <constraint firstItem="WYG-b3-a2k" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="AEL-tD-XBq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f5d-MB-r74" secondAttribute="trailing" constant="25" id="F0e-Ll-dn0"/>
-                            <constraint firstItem="I7L-8y-DPK" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="Jk8-X5-a2V"/>
+                            <constraint firstItem="I7L-8y-DPK" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="40" id="Jk8-X5-a2V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i3x-z7-F9c" secondAttribute="trailing" constant="25" id="P3F-42-GXY"/>
                             <constraint firstItem="f5d-MB-r74" firstAttribute="leading" secondItem="507-6D-aDx" secondAttribute="leadingMargin" constant="25" id="WTi-bd-LE8"/>
                             <constraint firstItem="GkA-Pd-PQk" firstAttribute="top" secondItem="f5d-MB-r74" secondAttribute="bottom" constant="20" id="st1-aX-su0"/>
@@ -884,6 +884,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
                                 <rect key="frame" x="33" y="562" width="34" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="9B6-J3-lPL" kind="show" id="0yu-CL-MX0"/>
@@ -924,6 +925,7 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
                                 <rect key="frame" x="534" y="562" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="addcard:" destination="UPa-dq-4w4" eventType="touchUpInside" id="mJe-1g-Ida"/>
@@ -1149,9 +1151,9 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0yu-CL-MX0"/>
         <segue reference="ZYK-NC-4Br"/>
         <segue reference="hmo-IP-AcU"/>
+        <segue reference="pYg-nG-ffc"/>
         <segue reference="67G-tT-4Tt"/>
     </inferredMetricsTieBreakers>
 </document>
