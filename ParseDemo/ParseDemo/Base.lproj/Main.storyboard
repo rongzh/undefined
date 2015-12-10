@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EAn-nz-Zos">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Reset Password View Controller-->
         <scene sceneID="sAg-yN-NMq">
             <objects>
-                <viewController storyboardIdentifier="ResetPassword" id="KVE-cM-mVc" customClass="ResetPasswordViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResetPassword" id="KVE-cM-mVc" customClass="ResetPasswordViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xa8-Rp-NUF"/>
                         <viewControllerLayoutGuide type="bottom" id="RfN-LF-5Ps"/>
@@ -111,7 +111,7 @@
         <!--Friends View Controller-->
         <scene sceneID="VRI-wu-gfD">
             <objects>
-                <viewController title="Friends View Controller" id="A7a-J1-GLu" customClass="FriendViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Friends View Controller" id="A7a-J1-GLu" customClass="FriendViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DkL-tb-8Hj"/>
                         <viewControllerLayoutGuide type="bottom" id="VCw-O3-q1X"/>
@@ -140,7 +140,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qzh-37-UGB" id="dCb-Wy-yQO">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -186,7 +186,7 @@
         <!--Login View Controller-->
         <scene sceneID="U56-pu-fWm">
             <objects>
-                <viewController storyboardIdentifier="Login" id="EAn-nz-Zos" customClass="LoginViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="EAn-nz-Zos" customClass="LoginViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aop-wn-DRR"/>
                         <viewControllerLayoutGuide type="bottom" id="hc5-aR-wUr"/>
@@ -322,7 +322,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="3lb-wD-rbh">
             <objects>
-                <viewController storyboardIdentifier="SignUp" id="rMA-Qa-Dfn" customClass="SignUpViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="rMA-Qa-Dfn" customClass="SignUpViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9FF-9b-KJx"/>
                         <viewControllerLayoutGuide type="bottom" id="OBb-fH-P4c"/>
@@ -444,7 +444,7 @@
         <!--Home View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="Home" id="vXZ-lx-hvc" customClass="HomeViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="vXZ-lx-hvc" customClass="HomeViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -542,7 +542,7 @@
         <!--DashBoard View Controller Scene-->
         <scene sceneID="IAG-H6-vLP">
             <objects>
-                <viewController storyboardIdentifier="DashBoard" title="DashBoard View Controller Scene" id="9B6-J3-lPL" customClass="DashBoardViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashBoard" title="DashBoard View Controller Scene" id="9B6-J3-lPL" customClass="DashBoardViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="47U-6X-qus"/>
                         <viewControllerLayoutGuide type="bottom" id="NWC-E9-DHf"/>
@@ -622,7 +622,7 @@
         <!--Card View Controller Scene-->
         <scene sceneID="05L-Ll-PBa">
             <objects>
-                <viewController title="Card View Controller Scene" id="tcJ-56-XNp" customClass="CardViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Card View Controller Scene" id="tcJ-56-XNp" customClass="CardViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i5o-wV-dKn"/>
                         <viewControllerLayoutGuide type="bottom" id="GkA-Pd-PQk"/>
@@ -699,7 +699,7 @@
         <!--CardList View Controller-->
         <scene sceneID="AXt-BB-At1">
             <objects>
-                <viewController storyboardIdentifier="CardListViewController" id="bLu-Dq-gfP" userLabel="CardList View Controller" customClass="CardListViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardListViewController" id="bLu-Dq-gfP" userLabel="CardList View Controller" customClass="CardListViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hqf-7i-98j"/>
                         <viewControllerLayoutGuide type="bottom" id="sO0-RY-aNi"/>
@@ -721,7 +721,7 @@
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YOD-Ca-l5Y" id="1ZB-r1-adH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -768,7 +768,7 @@
         <!--AddFriends View Controller Scene-->
         <scene sceneID="Fml-JV-JRj">
             <objects>
-                <viewController title="AddFriends View Controller Scene" id="1dR-rn-7Rw" customClass="AddFriendViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AddFriends View Controller Scene" id="1dR-rn-7Rw" customClass="AddFriendViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jBY-NV-Mvt"/>
                         <viewControllerLayoutGuide type="bottom" id="ev8-GV-lc3"/>
@@ -793,7 +793,7 @@
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTK-NK-I92" id="Sjc-Uj-wDG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration">
@@ -852,7 +852,7 @@
         <!--Add Card View Controller-->
         <scene sceneID="fRq-Zb-kGe">
             <objects>
-                <viewController id="UPa-dq-4w4" customClass="AddCardViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UPa-dq-4w4" customClass="AddCardViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2zq-q6-HzF"/>
                         <viewControllerLayoutGuide type="bottom" id="eJ4-L1-bla"/>
@@ -980,7 +980,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nkk-E2-TVy" id="NHg-np-g74">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -998,7 +998,7 @@
         <!--Folder View Controller-->
         <scene sceneID="3Ti-WI-L8y">
             <objects>
-                <viewController storyboardIdentifier="Folder View Controller" title="Foler View Controller" id="9HC-yp-fxe" userLabel="Folder View Controller" customClass="FolderViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Folder View Controller" title="Foler View Controller" id="9HC-yp-fxe" userLabel="Folder View Controller" customClass="FolderViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mS9-yM-6hF"/>
                         <viewControllerLayoutGuide type="bottom" id="naf-cm-XyT"/>
@@ -1037,7 +1037,7 @@
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kkh-Cl-esr" id="uNF-ec-eCk">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1068,7 +1068,7 @@
         <!--Share Card View Controller-->
         <scene sceneID="G27-hE-lHP">
             <objects>
-                <viewController storyboardIdentifier="Share Card View Controller" id="bUO-MG-tBG" customClass="ShareCardViewController" customModule="ParseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Share Card View Controller" id="bUO-MG-tBG" customClass="ShareCardViewController" customModule="FlashCardPro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rcj-bA-YjI"/>
                         <viewControllerLayoutGuide type="bottom" id="XBk-hV-nWL"/>
@@ -1102,11 +1102,11 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lTZ-BN-E7x" id="iH9-J6-h5S">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mli-LT-ltY">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
