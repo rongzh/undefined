@@ -575,12 +575,6 @@
                                     <segue destination="A7a-J1-GLu" kind="show" id="2vn-bN-Hw0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-fa-DOa">
-                                <rect key="frame" x="215" y="20" width="185" height="146"/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ7-BA-gGw">
                                 <rect key="frame" x="315" y="111" width="171" height="176"/>
                                 <state key="normal" title="Button" image="deck"/>
@@ -611,9 +605,6 @@
                             <constraint firstItem="OJm-ma-uvZ" firstAttribute="width" secondItem="EPd-pg-cE5" secondAttribute="width" id="wkB-hh-D6L"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="usernameLabel" destination="rqu-fa-DOa" id="Rud-cv-Ti4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd8-V9-lJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1160,8 +1151,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZYK-NC-4Br"/>
-        <segue reference="hmo-IP-AcU"/>
+        <segue reference="2vn-bN-Hw0"/>
         <segue reference="0yu-CL-MX0"/>
-        <segue reference="67G-tT-4Tt"/>
+        <segue reference="0AV-wd-BkS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,7 +15,6 @@ class DashBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.usernameLabel.text = PFUser.currentUser()!.username
         // Show the current visitor's username
     }
     
