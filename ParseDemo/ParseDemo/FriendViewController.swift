@@ -14,9 +14,14 @@ class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDat
     
     @IBOutlet weak var friendname: UITextField!
     
+    @IBOutlet weak var SearchBar: UISearchBar!
+    
+    
+    
     @IBOutlet weak var myTable: UITableView!
     var friendsArray:[String] = [String]()
     
+    var SearchFriendsList=[String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.delegate = self
@@ -70,6 +75,72 @@ class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDat
               //  print(error)
            // }
        // }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar){
+        myTable.reloadData()
+        SearchBar.resignFirstResponder()
+        let nameQuery = PFQuery(className: "Users")
+        nameQuery.whereKey("username",containsString:searchBar.text)
+        let fQuery = PFQuery(className: "Friends")
+        let current = PFUser.currentUser()!.username
+        fQuery.whereKey("fid1", containsString: searchBar.text)
+        fQuery.whereKey("fid2",  equalTo: current!)
+        var existf=[String]()
+        
+        fQuery.findObjectsInBackgroundWithBlock{
+            (results:[AnyObject]?,error:NSError?) -> Void in
+            if error != nil
+            {}
+            if let objects = results as? [PFObject]{
+                for object in objects{
+                    let name = object.objectForKey("fid1") as! String
+                    existf.append(name)
+                }
+            }
+            
+        }
+        
+        let query = PFQuery.orQueryWithSubqueries([nameQuery])
+        
+        query.findObjectsInBackgroundWithBlock{
+            (results:[AnyObject]?,error:NSError?) -> Void in
+            
+            if error != nil
+            {
+                let myAlert = UIAlertController(title:"Alert",message:error?.localizedDescription,preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okAction = UIAlertAction(title:"Ok",style:UIAlertActionStyle.Default,handler: nil)
+                
+                myAlert.addAction(okAction)
+                self.presentViewController(myAlert,animated:true,completion:nil)
+                
+                return
+            }
+            
+            if let objects = results as? [PFObject]{
+                self.SearchFriendsList.removeAll(keepCapacity: false)
+                
+                for object in objects{
+                    let name = object.objectForKey("username") as! String
+                    if (!existf.contains(name)){
+                        self.SearchFriendsList.append(name)
+                    }
+                }
+                
+                dispatch_async(dispatch_get_main_queue()){
+                    self.myTable.reloadData()
+                    self.SearchBar.resignFirstResponder()
+                }
+            }
+        }
+        
+    }
+    func searchBarCancelButtonClicked(searchBar: UISearchBar){
+        SearchBar.resignFirstResponder()
+        SearchBar.text=""
+        SearchBar.setShowsCancelButton(false, animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {

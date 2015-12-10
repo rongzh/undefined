@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate{
+class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate {
     
     @IBAction func addcard(sender: AnyObject) {
         addCards()
@@ -23,6 +23,7 @@ class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
     @IBOutlet weak var degree: UIPickerView!
     @IBOutlet weak var backinfo: UITextField!
         override func viewDidLoad() {
+        
         
             
         super.viewDidLoad()
@@ -157,7 +158,14 @@ class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
         
         return pickerLabel
         
-    }    /*
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    /*
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
