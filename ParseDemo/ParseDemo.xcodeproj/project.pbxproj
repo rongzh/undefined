@@ -71,7 +71,7 @@
 		ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		ACD0C4D11BEE56CB00630E46 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		ACD0C4D31BEE595E00630E46 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
-		E02347091B677CD3004F2DBE /* ParseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02347091B677CD3004F2DBE /* FlashCardPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCardPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E023470D1B677CD3004F2DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E023470E1B677CD3004F2DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E02347131B677CD3004F2DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		E023470A1B677CD3004F2DBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E02347091B677CD3004F2DBE /* ParseDemo.app */,
+				E02347091B677CD3004F2DBE /* FlashCardPro.app */,
 				E023471E1B677CD3004F2DBE /* ParseDemoTests.xctest */,
 			);
 			name = Products;
@@ -241,7 +241,7 @@
 			);
 			name = ParseDemo;
 			productName = ParseDemo;
-			productReference = E02347091B677CD3004F2DBE /* ParseDemo.app */;
+			productReference = E02347091B677CD3004F2DBE /* FlashCardPro.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E023471D1B677CD3004F2DBE /* ParseDemoTests */ = {
@@ -471,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -478,7 +479,7 @@
 				INFOPLIST_FILE = ParseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abearablecode.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlashCardPro;
 			};
 			name = Debug;
 		};
@@ -486,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -493,7 +495,7 @@
 				INFOPLIST_FILE = ParseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abearablecode.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlashCardPro;
 			};
 			name = Release;
 		};
