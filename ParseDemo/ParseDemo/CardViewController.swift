@@ -30,7 +30,7 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     var front:UIImageView!
     var back:UIImageView!
       var index = 0
-    let degreePicker = ["1","2","3","4","5"]
+    let degreePicker = ["1 (brand new)","2","3","4","5 (expert)"]
 
     var showingBack = false
     
@@ -161,6 +161,8 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
             if error != nil{
                 print(error)
             }else if let cards = cards{
+                let oldd = cards.objectForKey("degree") as! String
+                if oldd != self.globalDegree{
                 cards["degree"] = self.globalDegree
                 let alert = UIAlertView()
                 alert.title = "Degree Updated"
@@ -168,6 +170,7 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
                 alert.addButtonWithTitle("OK")
                 alert.show()
                 cards.saveInBackground()
+                }
             }
         }
     }
@@ -184,9 +187,8 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         return degreePicker[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == degreePicker{
         myLabel.text = degreePicker[row]
-        }
+        
     }
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

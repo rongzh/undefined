@@ -709,7 +709,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Uo-eu-9ef">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="53" width="600" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="ud4-14-sxe">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -728,7 +728,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUo-s6-SYZ">
-                                <rect key="frame" x="0.0" y="0.0" width="606" height="44"/>
+                                <rect key="frame" x="0.0" y="9" width="606" height="44"/>
                                 <items>
                                     <navigationItem id="BKG-5K-pAl">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="eg2-hu-bxg">
@@ -869,18 +869,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
-                                <rect key="frame" x="33" y="562" width="46" height="30"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="addcard:" destination="UPa-dq-4w4" eventType="touchUpInside" id="mJe-1g-Ida"/>
-                                </connections>
-                            </button>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-97-XQh">
                                 <rect key="frame" x="50" y="239" width="150" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="NYK-y4-Nlz"/>
-                                    <constraint firstAttribute="width" constant="150" id="faC-H8-38d"/>
+                                    <constraint firstAttribute="width" constant="250" id="faC-H8-38d"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-PC-tbf">
@@ -890,7 +883,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-6l-Yco">
-                                <rect key="frame" x="540" y="562" width="34" height="30"/>
+                                <rect key="frame" x="33" y="562" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="9B6-J3-lPL" kind="show" id="0yu-CL-MX0"/>
@@ -929,11 +922,17 @@
                                     <constraint firstAttribute="height" constant="55" id="ShI-x8-LDo"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuA-O5-dZ9">
+                                <rect key="frame" x="534" y="562" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="addcard:" destination="UPa-dq-4w4" eventType="touchUpInside" id="mJe-1g-Ida"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eJ4-L1-bla" firstAttribute="top" secondItem="Max-NJ-DhC" secondAttribute="bottom" constant="45" id="2g0-Yw-KmV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dSL-6l-Yco" secondAttribute="trailing" constant="10" id="31O-XV-pLo"/>
                             <constraint firstItem="YuA-O5-dZ9" firstAttribute="top" secondItem="GzZ-pC-zyX" secondAttribute="bottom" constant="45" id="7Bm-gB-R00"/>
                             <constraint firstItem="6wz-c3-04E" firstAttribute="top" secondItem="ndl-Gq-wrN" secondAttribute="bottom" constant="50" id="8OI-X0-7QR"/>
                             <constraint firstItem="ndl-Gq-wrN" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="8TR-BV-h0g"/>
@@ -943,14 +942,15 @@
                             <constraint firstItem="jgC-JI-JEE" firstAttribute="top" secondItem="2zq-q6-HzF" secondAttribute="bottom" constant="45" id="VUV-RN-tii"/>
                             <constraint firstItem="uh1-L7-jqr" firstAttribute="top" secondItem="jgC-JI-JEE" secondAttribute="bottom" constant="60" id="Wdb-1T-L7l"/>
                             <constraint firstItem="uh1-L7-jqr" firstAttribute="leading" secondItem="6wz-c3-04E" secondAttribute="trailing" constant="-75" id="Xrd-9w-qmW"/>
-                            <constraint firstItem="YuA-O5-dZ9" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="10" id="Zc5-Ti-f1u"/>
                             <constraint firstItem="eJ4-L1-bla" firstAttribute="top" secondItem="YuA-O5-dZ9" secondAttribute="bottom" constant="10" id="cFJ-8V-CCI"/>
                             <constraint firstItem="Dss-PC-tbf" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="cMw-61-jbL"/>
+                            <constraint firstItem="YuA-O5-dZ9" firstAttribute="trailing" secondItem="7x9-oi-gyI" secondAttribute="trailingMargin" constant="10" id="f2y-x7-o9Q"/>
                             <constraint firstItem="ndl-Gq-wrN" firstAttribute="top" secondItem="2zq-q6-HzF" secondAttribute="bottom" constant="25" id="hzr-3O-JmL"/>
                             <constraint firstItem="EFb-97-XQh" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="iGy-no-rGU"/>
                             <constraint firstItem="Dss-PC-tbf" firstAttribute="top" secondItem="6wz-c3-04E" secondAttribute="bottom" constant="100" id="iQY-Pd-opK"/>
                             <constraint firstItem="6wz-c3-04E" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="25" id="igw-3m-zxQ"/>
                             <constraint firstItem="GzZ-pC-zyX" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="10" id="mhv-Tf-HFr"/>
+                            <constraint firstItem="dSL-6l-Yco" firstAttribute="leading" secondItem="7x9-oi-gyI" secondAttribute="leadingMargin" constant="10" id="oqv-dY-3ul"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Max-NJ-DhC" secondAttribute="trailing" constant="25" id="wOV-9l-Jvk"/>
                         </constraints>
                     </view>
@@ -1149,9 +1149,9 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="0yu-CL-MX0"/>
         <segue reference="ZYK-NC-4Br"/>
         <segue reference="hmo-IP-AcU"/>
-        <segue reference="iCI-tb-35v"/>
         <segue reference="67G-tT-4Tt"/>
     </inferredMetricsTieBreakers>
 </document>

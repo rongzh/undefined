@@ -129,7 +129,7 @@ class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
             titleData = folders[row]
         }
 
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blueColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 10.0)!,NSForegroundColorAttributeName:UIColor.blueColor()])
         return myTitle
     }
     
@@ -151,7 +151,7 @@ class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
         else if pickerView == degree{
             titleData = degreePicker[row]
         }
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 20.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
         pickerLabel!.attributedText = myTitle
         pickerLabel!.textAlignment = .Center
         

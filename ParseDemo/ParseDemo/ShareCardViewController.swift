@@ -17,8 +17,6 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
         for i in checkornot{
             if i == true {
                 print("enter the condition")
-                let alert = UIAlertView(title: "enter the condition", message: "", delegate: self, cancelButtonTitle: "OK")
-                alert.show()
                name = friendsArray[checkornot.indexOf(i)!]
                 let query = PFQuery(className: "Card")
                 query.whereKey("objectId", equalTo:cardId)
@@ -34,17 +32,13 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
                     let newfolder = PFObject(className: "Folder")
                     newfolder["userid"] = name
                     newfolder["fname"] = "Shared to me"
-                    let alert = UIAlertView(title: "creating folder", message: "", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
                     newfolder.saveInBackgroundWithBlock{
                         (success:Bool, error:NSError?) -> Void in
                         if(success){
-                            let alert = UIAlertView(title: "Success", message: "Folder Created", delegate: self, cancelButtonTitle: "OK")
-                            alert.show()
+                        
                         }
                         else{
-                            let alert = UIAlertView(title: "Oops", message: "Something is wrong...", delegate: self, cancelButtonTitle: "OK")
-                            alert.show()
+                            
                         }
                         
                     }
@@ -52,8 +46,7 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
                 var newCard = PFObject(className: "Card")
                 var current = PFUser.currentUser()!.username
                 
-                let alert1 = UIAlertView(title: "create new card", message: "", delegate: self, cancelButtonTitle: "OK")
-                alert1.show()
+                
                 newCard["def"] = scoreArrary![0].objectForKey("def")
                 newCard["back"] = scoreArrary![0].objectForKey("back")
                 newCard["userid"] = name
