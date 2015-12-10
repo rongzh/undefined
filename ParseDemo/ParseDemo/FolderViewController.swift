@@ -12,13 +12,20 @@ import Parse
 class FolderViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     @IBOutlet weak var usernameLabel: UITextField!
     var popViewController : AddFolderPopUpViewController!
-    
+    var show = false
     @IBOutlet weak var MyTable: UITableView!
+    //var hellotable : UITableView = MyTable
+    
     @IBAction func addCalled(sender: AnyObject) {
         
     }
     @IBOutlet weak var SearchBar: UISearchBar!
     var foldersArray:[String] = [String]()
+    
+    //var myTable: SomeType = someValue
+    
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         //if (foldersArray.count % 2 == 1){
           //  return foldersArray.count/2 + 1
@@ -51,7 +58,8 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
     override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         MyTable.delegate = self
@@ -76,24 +84,37 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
             }
             
         }
-        
-        
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "CardListViewController"
-        {
-            let detailViewController = ((segue.destinationViewController) as! CardListViewController)
-            let indexPath = self.MyTable.indexPathForSelectedRow!
-            let foldername = foldersArray[indexPath.row]
-            detailViewController.foldername = foldername
-            print(foldername)
+        if(show){
+            self.MyTable.reloadData()
         }
+    
     }
+    
+    func reloadTableData(notification: NSNotification) {
+        MyTable.reloadData()
+    }
+    
+    
+    func loadList(notification: NSNotification){
+        //load data here
+        self.MyTable.reloadData()
+    }
+    
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
+        self.MyTable.reloadData()
+    }
+
+    
     @IBAction func ShowPopUp(sender: UIBarButtonItem) {
+        show = true
         let bundle = NSBundle(forClass: AddFolderPopUpViewController.self)
         self.popViewController = AddFolderPopUpViewController(nibName: "AddFolderPopUp", bundle: nil)
         //self.popViewController.title = "This is a popup view"
+        //self.popViewController.showViewController(<#T##vc: UIViewController##UIViewController#>, sender: <#T##AnyObject?#>)
          self.popViewController.showInView(self.view,animated:true)
+        //self.MyTable.reloadData()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -101,8 +122,13 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
 
+    func reloaddata(){
+        self.MyTable.reloadData()
+
+    }
+    
    
-    /*
+       /*
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -10,8 +10,11 @@ import UIKit
 import Parse
 
 class AddFolderPopUpViewController: UIViewController/*,UITableViewDataSource, UITableViewDelegate*/{
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var foldername: UITextField!
     
+    @IBOutlet weak var CancelButton: UIButton!
+    @IBOutlet weak var CreateButton: UIButton!
 //    let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 //    let nextViewController = storyboard.instantiateViewControllerWithIdentifier("Folder View Controller") as FolderViewController
 //    self.presentViewController(nextViewController, animated:true, completion:nil)
@@ -39,6 +42,7 @@ class AddFolderPopUpViewController: UIViewController/*,UITableViewDataSource, UI
 
     
     @IBAction func createfolder(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
         let fname_ = foldername.text
         let newfolder = PFObject(className: "Folder")
         let current = PFUser.currentUser()!.username
@@ -49,13 +53,25 @@ class AddFolderPopUpViewController: UIViewController/*,UITableViewDataSource, UI
             if(success){
                 let alert = UIAlertView(title: "Success", message: "Folder Created", delegate: self, cancelButtonTitle: "OK")
                 alert.show()
+                NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
+                //var myCustomViewController: FolderViewController = FolderViewController(nibName: nil, bundle: nil)
+                //myCustomViewController.viewWillAppear(ani)
+                //myCustomViewController.refreshUI()
+                
             }
             else{
                 let alert = UIAlertView(title: "Oops", message: "Something is wrong...", delegate: self, cancelButtonTitle: "OK")
                 alert.show()
             }
+        
         }
         
+        //var myCustomViewController: FolderViewController = FolderViewController(nibName: nil, bundle: nil)
+        //var getThatValue :UITableView = myCustomViewController.MyTable
+        //getThatValue.reloadData()
+        
+        //var getshow = myCustomViewController.show
+        //print(getshow)
         //self.folderViewController.foldersArray.removeAll()
 //        self.folderview!.foldersArray.removeAll()
 //        let fQuery = PFQuery(className: "Folder")
@@ -78,10 +94,14 @@ class AddFolderPopUpViewController: UIViewController/*,UITableViewDataSource, UI
 //            }
 //            
 //        }
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("Folder View Controller") as! FolderViewController
+        self.presentViewController(vc,animated:true,completion:nil)
 
-        self.removeAnimate()
+
+        //self.removeAnimate()
     }
-        
+  
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -103,7 +123,7 @@ class AddFolderPopUpViewController: UIViewController/*,UITableViewDataSource, UI
         //folderview = FolderViewController()
         //self.folderViewController.MyTable.delegate = self
         //self.folderViewController.MyTable.dataSource = self
-    }
+        NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)    }
     
     public func showInView(aView: UIView!, animated: Bool)
     {
@@ -136,7 +156,9 @@ class AddFolderPopUpViewController: UIViewController/*,UITableViewDataSource, UI
                 }
         });
     }
-    
+   
+    override func viewWillAppear(animated: Bool) {
+    }
     
         /*
     // MARK: - Navigation

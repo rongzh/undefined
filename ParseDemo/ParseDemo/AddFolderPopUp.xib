@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFolderPopUpViewController" customModule="ParseDemo" customModuleProvider="target">
             <connections>
+                <outlet property="CancelButton" destination="MNI-yC-dAA" id="IOG-io-dUL"/>
+                <outlet property="CreateButton" destination="3At-fb-EXW" id="2kb-uK-g4A"/>
                 <outlet property="foldername" destination="X27-3A-22F" id="vkB-3z-Enj"/>
+                <outlet property="label" destination="iPb-mB-2I4" id="Z4Q-Zd-eC4"/>
                 <outlet property="view" destination="aOr-K0-t3c" id="Ynd-oT-gnv"/>
             </connections>
         </placeholder>
@@ -16,33 +19,39 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Folder Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-mB-2I4">
-                    <rect key="frame" x="60" y="223" width="142" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-fb-EXW">
-                    <rect key="frame" x="139" y="324" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-fb-EXW">
+                    <rect key="frame" x="319" y="295" width="46" height="30"/>
                     <state key="normal" title="Create"/>
                     <connections>
                         <action selector="createfolder:" destination="-1" eventType="touchUpInside" id="b1f-YC-GbE"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X27-3A-22F">
-                    <rect key="frame" x="88" y="263" width="97" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X27-3A-22F">
+                    <rect key="frame" x="216" y="209" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNI-yC-dAA">
-                    <rect key="frame" x="44" y="324" width="48" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNI-yC-dAA">
+                    <rect key="frame" x="185" y="295" width="48" height="30"/>
                     <state key="normal" title="Cancel"/>
                     <connections>
                         <action selector="closepopup:" destination="-1" eventType="touchUpInside" id="Cua-wd-riI"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="New Folder Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-mB-2I4">
+                    <rect key="frame" x="185" y="149" width="142" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="X27-3A-22F" firstAttribute="width" secondItem="iPb-mB-2I4" secondAttribute="width" id="0r7-DP-9sw"/>
+                <constraint firstItem="X27-3A-22F" firstAttribute="top" secondItem="iPb-mB-2I4" secondAttribute="bottom" constant="20" id="9Fn-yZ-Dv8"/>
+                <constraint firstItem="3At-fb-EXW" firstAttribute="height" secondItem="MNI-yC-dAA" secondAttribute="height" id="GNp-Ga-flA"/>
+                <constraint firstItem="iPb-mB-2I4" firstAttribute="top" secondItem="aOr-K0-t3c" secondAttribute="top" constant="150" id="opc-aH-iS8"/>
+            </constraints>
         </view>
     </objects>
 </document>
