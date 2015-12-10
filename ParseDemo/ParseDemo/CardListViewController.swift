@@ -96,6 +96,8 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             self.cardforshare = self.idResults[indexPath.row]
             let storyboard = UIStoryboard(name:"Main",bundle:nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("Share Card View Controller") as! ShareCardViewController
+            vc.cardId = self.idResults[indexPath.row]
+            vc.foldername = self.foldername
             self.presentViewController(vc,animated:true,completion:nil)
         }
         

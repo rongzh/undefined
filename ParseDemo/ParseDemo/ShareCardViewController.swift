@@ -13,9 +13,68 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
      var friendsArray:[String] = [String]()
     //var selectedRowSets = [NSMutableIndexSet]()
     @IBAction func ShareCalled(sender: AnyObject) {
-        var checkornot:[Bool] = [Bool]()
-        //print(selectedRowSets)
+        var name = String()
+        for i in checkornot{
+            if i == true {
+                print("enter the condition")
+                let alert = UIAlertView(title: "enter the condition", message: "", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+               name = friendsArray[checkornot.indexOf(i)!]
+                let query = PFQuery(className: "Card")
+                query.whereKey("objectId", equalTo:cardId)
+                
+                let scoreArrary = query.findObjects()
+                
+                let query1 = PFQuery(className: "Folder")
+                query1.whereKey("userid", equalTo:name)
+                query1.whereKey("fname", equalTo:"Shared to me")
+                
+                let scoreArrary1 = query1.findObjects()
+                if scoreArrary1!.count == 0 {
+                    let newfolder = PFObject(className: "Folder")
+                    newfolder["userid"] = name
+                    newfolder["fname"] = "Shared to me"
+                    let alert = UIAlertView(title: "creating folder", message: "", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    newfolder.saveInBackgroundWithBlock{
+                        (success:Bool, error:NSError?) -> Void in
+                        if(success){
+                            let alert = UIAlertView(title: "Success", message: "Folder Created", delegate: self, cancelButtonTitle: "OK")
+                            alert.show()
+                        }
+                        else{
+                            let alert = UIAlertView(title: "Oops", message: "Something is wrong...", delegate: self, cancelButtonTitle: "OK")
+                            alert.show()
+                        }
+                        
+                    }
+                }
+                var newCard = PFObject(className: "Card")
+                var current = PFUser.currentUser()!.username
+                
+                let alert1 = UIAlertView(title: "create new card", message: "", delegate: self, cancelButtonTitle: "OK")
+                alert1.show()
+                newCard["def"] = scoreArrary![0].objectForKey("def")
+                newCard["back"] = scoreArrary![0].objectForKey("back")
+                newCard["userid"] = name
+                newCard["degree"] = "1 (brand new)"
+                newCard["foldername"] = "Shared to me"
+                newCard.saveInBackgroundWithBlock{
+                    (success:Bool, error:NSError?) -> Void in
+                    if(success){
+                        let alert = UIAlertView(title: "Success", message: "Card Shared", delegate: self, cancelButtonTitle: "OK")
+                        alert.show()
+                    }
+                    else{
+                        let alert = UIAlertView(title: "Oops1", message: "Something is wrong...", delegate: self, cancelButtonTitle: "OK")
+                        alert.show()
+                    }
+                }
+            }// if true
+     
+        }//for
     }
+    var checkornot:[Bool] = [Bool]()
     @IBOutlet weak var BackButton: UIBarButtonItem!
     var cardId = String()
     var foldername = String()
@@ -56,11 +115,12 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
         //let selectedRows=self.selectedRowSets[indexPath.section]
         if myCell.selected{
             myCell.accessoryType = UITableViewCellAccessoryType.Checkmark
-            //checkornot.append(true)
+            self.checkornot.append(true)
              //selectedRows.addIndex(indexPath.row);
         }
         else{
             myCell.accessoryType = UITableViewCellAccessoryType.None;
+            self.checkornot.append(false)
             //selectedRows.removeIndex(indexPath.row)
         }
         
@@ -75,10 +135,12 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
         let myCell = tableView.cellForRowAtIndexPath(indexPath)
         if (myCell!.accessoryType == UITableViewCellAccessoryType.Checkmark){
             myCell!.accessoryType = UITableViewCellAccessoryType.None
+            self.checkornot[indexPath.row] = false
             //selectedRows.removeIndex(indexPath.row)
         }
         else{
             myCell!.accessoryType = UITableViewCellAccessoryType.Checkmark;
+            self.checkornot[indexPath.row] = true
             //selectedRows.addIndex(indexPath.row);
         }
         

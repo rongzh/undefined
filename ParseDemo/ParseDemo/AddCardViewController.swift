@@ -16,7 +16,7 @@ class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
     }
     @IBOutlet weak var folderPicker: UIPickerView!
     @IBOutlet weak var frontinfo: UITextField!
-    let degreePicker = ["1","2","3","4","5"]
+    let degreePicker = ["1 (brand new)","2","3","4","5 (expert)"]
     @IBOutlet weak var myLabel1: UILabel!
      var folders = [String]()
     @IBOutlet weak var myLabel: UILabel!
