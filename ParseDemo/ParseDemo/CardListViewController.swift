@@ -15,6 +15,8 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
     var idResults=[String]()
     var foldername = String()
     var cardforshare = String()
+    //let newSegueIdentifier = "Share Card View Controller1"
+    @IBOutlet weak var StartButton: UIBarButtonItem!
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -48,7 +50,9 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             self.idResults.append(substring2)
             
         }
-
+        if idResults.count == 0{
+            StartButton.enabled = false;
+        }
         //self.usernameLabel.text = PFUser.currentUser()!.username
         // Show the current visitor's username
     }
@@ -115,8 +119,12 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         if segue.identifier == "Share Card View Controller"
         {
             let detailViewController = ((segue.destinationViewController) as! ShareCardViewController)
-            detailViewController.cardId = cardforshare
-            detailViewController.foldername = foldername
+            if let cell = sender as? UITableViewCell, let indexPath = myTable.indexPathForCell(cell) {
+                detailViewController.cardId = cardforshare
+                detailViewController.foldername = foldername
+            }
+            //detailViewController.cardId = cardforshare
+            //detailViewController.foldername = foldername
             print("test here!!!!")
             print(detailViewController.foldername)
             

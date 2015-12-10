@@ -13,8 +13,10 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
      var friendsArray:[String] = [String]()
     //var selectedRowSets = [NSMutableIndexSet]()
     @IBAction func ShareCalled(sender: AnyObject) {
+        var checkornot:[Bool] = [Bool]()
         //print(selectedRowSets)
     }
+    @IBOutlet weak var BackButton: UIBarButtonItem!
     var cardId = String()
     var foldername = String()
     @IBOutlet weak var myTable: UITableView!
@@ -22,6 +24,7 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
         super.viewDidLoad()
         myTable.delegate = self
         myTable.dataSource = self
+        print("first get in : folder name is : ")
         print(foldername)
         retrieveFriends()
         }
@@ -53,6 +56,7 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
         //let selectedRows=self.selectedRowSets[indexPath.section]
         if myCell.selected{
             myCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            //checkornot.append(true)
              //selectedRows.addIndex(indexPath.row);
         }
         else{
@@ -105,10 +109,11 @@ class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewD
 
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "CardListViewController"
+        if segue.identifier == "CardListViewController1"
         {
             let detailViewController = ((segue.destinationViewController) as! CardListViewController)
-            detailViewController.foldername = foldername
+            detailViewController.foldername = self.foldername
+            print("we get here!!!!!this we are going back")
             print(foldername)
         }
     }

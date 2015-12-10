@@ -58,6 +58,34 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .Destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            let query = PFQuery(className: "Folder")
+            query.whereKey("fname", equalTo: self.foldersArray[indexPath.row])
+            query.whereKey("userid",equalTo: PFUser.currentUser()!.username!)
+            let scoreArrary = query.findObjects()
+            
+            let object = scoreArrary![0]
+            object.deleteInBackground();
+            print("deleted")
+            
+            let query1 = PFQuery(className: "Card")
+            query1.whereKey("foldername", equalTo: self.foldersArray[indexPath.row])
+            query1.whereKey("userid",equalTo: PFUser.currentUser()!.username!)
+            let scoreArrary1 = query1.findObjects()
+            for object1 in scoreArrary1!{
+                object1.deleteInBackground();
+                print("delete card also")
+            }
+
+            self.foldersArray.removeAtIndex(indexPath.row)
+            // remove the deleted item from the `UITableView`
+            self.MyTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    }
+        
+        return [delete]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
