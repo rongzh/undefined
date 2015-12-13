@@ -69,7 +69,31 @@ class SignUpViewController: UIViewController {
                         (success: Bool, error: NSError?) -> Void in
                         
                     }
-                
+                    
+                    let newfolder = PFObject(className: "Folder")
+                    let current = PFUser.currentUser()!.username
+                    newfolder["userid"] = current
+                    newfolder["fname"] = "My First Folder"
+                    newfolder.saveInBackgroundWithBlock{
+                        (success:Bool, error:NSError?) -> Void in
+                        if(success){
+                            let alert = UIAlertView(title: "Success", message: "First Folder Created", delegate: self, cancelButtonTitle: "OK")
+                            alert.show()
+                            //NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
+                            //var myCustomViewController: FolderViewController = FolderViewController(nibName: nil, bundle: nil)
+                            //myCustomViewController.viewWillAppear(ani)
+                            //myCustomViewController.refreshUI()
+                            
+                        }
+                        else{
+                            let alert = UIAlertView(title: "Oops", message: "Something is wrong...", delegate: self, cancelButtonTitle: "OK")
+                            alert.show()
+                        }
+                        
+                    }
+                    
+                    
+                    
                     let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
