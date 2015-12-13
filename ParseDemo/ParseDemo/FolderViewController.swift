@@ -13,7 +13,7 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet weak var usernameLabel: UITextField!
     var popViewController : AddFolderPopUpViewController!
     @IBOutlet weak var MyTable: UITableView!
-    //var hellotable : UITableView = MyTable
+    
     
     @IBAction func addCalled(sender: AnyObject) {
         
@@ -21,14 +21,11 @@ class FolderViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet weak var SearchBar: UISearchBar!
     var foldersArray:[String] = [String]()
     
-    //var myTable: SomeType = someValue
+   
     
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        //if (foldersArray.count % 2 == 1){
-          //  return foldersArray.count/2 + 1
-        //}
         return foldersArray.count
     }
     

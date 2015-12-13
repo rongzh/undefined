@@ -118,7 +118,19 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         
         share.backgroundColor = UIColor.blueColor()
         
-        return [delete, share]
+        
+        let move = UITableViewRowAction(style: .Normal, title: "Move") { (action, indexPath) in
+            // share item at indexPath
+            self.cardforshare = self.idResults[indexPath.row]
+            let storyboard = UIStoryboard(name:"Main",bundle:nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("MoveCardViewController") as! MoveCardViewController
+            vc.cardId = self.idResults[indexPath.row]
+            vc.foldername = self.foldername
+            self.presentViewController(vc,animated:true,completion:nil)
+        }
+        
+        move.backgroundColor = UIColor.purpleColor()
+        return [delete, share, move]
     }
 
     

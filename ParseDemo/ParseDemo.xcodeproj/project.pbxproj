@@ -17,6 +17,7 @@
 		5B75246B1BE4513A00C96BCF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B75246A1BE4513A00C96BCF /* libz.tbd */; };
 		5B75246D1BE4514300C96BCF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B75246C1BE4514300C96BCF /* libsqlite3.tbd */; };
 		5BC319C01C1148C300490A8E /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC319BF1C1148C300490A8E /* CardListViewController.swift */; };
+		5BEB14A31C1DDB46000919BB /* MoveCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB14A21C1DDB46000919BB /* MoveCardViewController.swift */; };
 		5BFD65161C0FA072009813DE /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD65151C0FA072009813DE /* FolderViewController.swift */; };
 		AC6B32931C1944F40007BA70 /* ShareCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B32921C1944F40007BA70 /* ShareCardViewController.swift */; };
 		ACBD15481C027DBD00D0E547 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */; };
@@ -66,6 +67,7 @@
 		5B75246A1BE4513A00C96BCF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5B75246C1BE4514300C96BCF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5BC319BF1C1148C300490A8E /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		5BEB14A21C1DDB46000919BB /* MoveCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCardViewController.swift; sourceTree = "<group>"; };
 		5BFD65151C0FA072009813DE /* FolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 		AC6B32921C1944F40007BA70 /* ShareCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCardViewController.swift; sourceTree = "<group>"; };
 		ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				ACBD15471C027DBD00D0E547 /* AddCardViewController.swift */,
 				E02347571B6BE242004F2DBE /* ResetPasswordViewController.swift */,
 				5BFD65151C0FA072009813DE /* FolderViewController.swift */,
+				5BEB14A21C1DDB46000919BB /* MoveCardViewController.swift */,
 				E02347151B677CD3004F2DBE /* Images.xcassets */,
 				E02347171B677CD3004F2DBE /* LaunchScreen.xib */,
 				E023470C1B677CD3004F2DBE /* Supporting Files */,
@@ -336,6 +339,7 @@
 				E02347581B6BE242004F2DBE /* ResetPasswordViewController.swift in Sources */,
 				ACBD15481C027DBD00D0E547 /* AddCardViewController.swift in Sources */,
 				AC6B32931C1944F40007BA70 /* ShareCardViewController.swift in Sources */,
+				5BEB14A31C1DDB46000919BB /* MoveCardViewController.swift in Sources */,
 				5BC319C01C1148C300490A8E /* CardListViewController.swift in Sources */,
 				E02347541B6A50F6004F2DBE /* SignUpViewController.swift in Sources */,
 				5B6B05E11BF1AA5900661D46 /* CardViewController.swift in Sources */,
