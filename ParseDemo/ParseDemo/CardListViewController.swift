@@ -59,6 +59,7 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         if idResults.count == 0{
             StartButton.enabled = false;
         }
+        myTable.reloadData();
         //self.usernameLabel.text = PFUser.currentUser()!.username
         // Show the current visitor's username
     }
@@ -167,7 +168,6 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let myCell = tableView.cellForRowAtIndexPath(indexPath)
         for i in checkornot{
             if i == true{
                 checkornot[checkornot.indexOf(i)!] = false;

@@ -9,13 +9,13 @@
 import UIKit
 import Parse
 
-class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
+class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate{
     @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var friendname: UITextField!
     
     @IBOutlet weak var SearchBar: UISearchBar!
-    
+    var searchActive : Bool = false
     
     
     @IBOutlet weak var myTable: UITableView!
@@ -26,6 +26,7 @@ class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         myTable.delegate = self
         myTable.dataSource = self
+        SearchBar.delegate = self;
         retrieveFriends()
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -64,29 +65,30 @@ class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDat
             
             
         }
-        
-        //var query = PFQuery(className: "User")
-        
-        //query.getObjectInBackgroundWithId("lZ4eHLhJex") {
-          //  (fid1: PFObject?, error: NSError?) -> Void in
-            //if error == nil && fid1 != nil {
-              //  self.friendname.text = "fid1";
-            //} else {
-              //  print(error)
-           // }
-       // }
     }
-    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if(friendsArray.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.myTable.reloadData()
+    }
     func searchBarSearchButtonClicked(searchBar: UISearchBar){
+        searchActive = false;
+        friendsArray.removeAll();
         myTable.reloadData()
         SearchBar.resignFirstResponder()
-        let nameQuery = PFQuery(className: "Users")
-        nameQuery.whereKey("username",containsString:searchBar.text)
+//        let nameQuery = PFQuery(className: "Users")
+//        nameQuery.whereKey("username",containsString:searchBar.text)
         let fQuery = PFQuery(className: "Friends")
         let current = PFUser.currentUser()!.username
         fQuery.whereKey("fid1", containsString: searchBar.text)
         fQuery.whereKey("fid2",  equalTo: current!)
-        var existf=[String]()
+       // var existf=[String]()
         
         fQuery.findObjectsInBackgroundWithBlock{
             (results:[AnyObject]?,error:NSError?) -> Void in
@@ -95,50 +97,23 @@ class FriendViewController: UIViewController, UITableViewDelegate,UITableViewDat
             if let objects = results as? [PFObject]{
                 for object in objects{
                     let name = object.objectForKey("fid1") as! String
-                    existf.append(name)
+                    self.friendsArray.append(name)
                 }
-            }
-            
-        }
-        
-        let query = PFQuery.orQueryWithSubqueries([nameQuery])
-        
-        query.findObjectsInBackgroundWithBlock{
-            (results:[AnyObject]?,error:NSError?) -> Void in
-            
-            if error != nil
-            {
-                let myAlert = UIAlertController(title:"Alert",message:error?.localizedDescription,preferredStyle: UIAlertControllerStyle.Alert)
-                
-                let okAction = UIAlertAction(title:"Ok",style:UIAlertActionStyle.Default,handler: nil)
-                
-                myAlert.addAction(okAction)
-                self.presentViewController(myAlert,animated:true,completion:nil)
-                
-                return
-            }
-            
-            if let objects = results as? [PFObject]{
-                self.SearchFriendsList.removeAll(keepCapacity: false)
-                
-                for object in objects{
-                    let name = object.objectForKey("username") as! String
-                    if (!existf.contains(name)){
-                        self.SearchFriendsList.append(name)
-                    }
-                }
-                
                 dispatch_async(dispatch_get_main_queue()){
                     self.myTable.reloadData()
                     self.SearchBar.resignFirstResponder()
                 }
             }
+            
         }
-        
     }
     func searchBarCancelButtonClicked(searchBar: UISearchBar){
         SearchBar.resignFirstResponder()
         SearchBar.text=""
+        searchActive = false;
+        friendsArray.removeAll(keepCapacity: false)
+        retrieveFriends();
+        myTable.reloadData()
         SearchBar.setShowsCancelButton(false, animated: true)
         
     }

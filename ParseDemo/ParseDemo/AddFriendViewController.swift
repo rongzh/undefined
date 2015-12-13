@@ -21,6 +21,7 @@ class AddFriendViewController: UIViewController,UITableViewDataSource, UITableVi
         let nib = UINib(nibName: "viewTblCell", bundle: nil)
         myTable.registerNib(nib,forCellReuseIdentifier:"cell")
         
+        
         // fill the cache of a user's followees
     }
     

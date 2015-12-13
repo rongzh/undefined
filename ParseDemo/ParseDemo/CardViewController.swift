@@ -18,6 +18,9 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     }
     
     //@IBOutlet weak var cardtext: UITextField!
+    @IBAction func prevbutton(sender: AnyObject) {
+        previouscalled()
+    }
     @IBOutlet weak var textbox: UIView!
     @IBOutlet weak var Cardtext: UITextView!
     var cardView: UIView!
@@ -139,7 +142,7 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
             degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
         }
         
-        let rect = CGRectMake((view.frame.size.width-300)/4, 20, 300, 210)
+        let rect = CGRectMake((view.frame.size.width-300)/4, 50, 300, 210)
         cardView = UIView(frame: rect)
         back = UIImageView(image: UIImage(named: "back.png"))
         back.frame = rect
