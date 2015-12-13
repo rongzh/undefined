@@ -11,7 +11,6 @@ import Parse
 
 class ShareCardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
      var friendsArray:[String] = [String]()
-    //var selectedRowSets = [NSMutableIndexSet]()
     @IBAction func ShareCalled(sender: AnyObject) {
         var name = String()
         for i in checkornot{

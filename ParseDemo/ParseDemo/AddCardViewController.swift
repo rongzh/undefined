@@ -40,8 +40,9 @@ class AddCardViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
                 self.folders.append(name)
                 
             }
-
-            
+            myLabel.text = degreePicker[0]
+            myLabel1.text = folders[0]
+        
     }
     
     func addCards(){

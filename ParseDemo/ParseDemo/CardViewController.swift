@@ -17,8 +17,9 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         nextcalled()
     }
     
-    @IBOutlet weak var cardtext: UITextField!
+    //@IBOutlet weak var cardtext: UITextField!
     @IBOutlet weak var textbox: UIView!
+    @IBOutlet weak var Cardtext: UITextView!
     var cardView: UIView!
     var searchResults_front=[String]()
     var searchResults_back=[String]()
@@ -30,8 +31,11 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     var front:UIImageView!
     var back:UIImageView!
       var index = 0
+    var test = 0;
+    var startname = String()
+    var startdegree = ""
     let degreePicker = ["1 (brand new)","2","3","4","5 (expert)"]
-
+    var currentmem = [String]()
     var showingBack = false
     
 
@@ -41,32 +45,99 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         degree.dataSource = self
         degree.delegate = self
         let currentuser = PFUser.currentUser()!.username
-        
+        if startdegree != ""{
+            test = degreePicker.indexOf(startdegree)!
+        }
+        print(test)
+        if test == 0{
+            currentmem.append(degreePicker[0])
+        }
+        else{
+            var i = 0
+            while i <= test{
+                currentmem.append(degreePicker[i])
+                i++;
+            }
+        }
+        print(currentmem)
         
         let query = PFQuery(className: "Card")
         query.whereKey("userid", equalTo:currentuser!)
         query.whereKey("foldername", equalTo:foldername)
+        query.whereKey("degree", equalTo: "1 (brand new)")
         
-        let scoreArrary = query.findObjects()
-        
-        
+        var scoreArrary = query.findObjects()
         for object in scoreArrary!{
             let name = object.objectForKey("def") as! String
             let b_name = object.objectForKey("back") as! String
             let id = object.objectId as! AnyObject
             let degrees = object.objectForKey("degree") as! String
             
- 
+            
             self.searchResults_front.append(name)
             self.searchResults_back.append(b_name)
             self.searchResult_id.append(id as! String)
             self.searchResult_degrees.append(degrees)
-
+            
         }
-            self.cardtext.text = self.searchResults_front[index]
+        var hello = test
+        while searchResults_front.count == 0 || test > 0{
+            print("while")
+            if searchResults_front.count == 0 && test == 0{
+            let c = currentmem.count;
+            if c < 5{
+                currentmem.append(degreePicker[c])
+                self.searchResults_front.removeAll()
+                self.searchResults_back.removeAll()
+                self.searchResult_id.removeAll()
+                self.searchResult_degrees.removeAll()
+
+            }
+            else{
+                currentmem.removeAll()
+                currentmem.append(degreePicker[0])
+                self.searchResults_front.removeAll()
+                self.searchResults_back.removeAll()
+                self.searchResult_id.removeAll()
+                self.searchResult_degrees.removeAll()
+                }
+            }
+            print(currentmem)
+            for i in currentmem{
+            let query = PFQuery(className: "Card")
+                query.whereKey("userid", equalTo:currentuser!)
+                query.whereKey("foldername", equalTo:foldername)
+                query.whereKey("degree", equalTo: i)
+                scoreArrary = query.findObjects()
+                for object in scoreArrary!{
+                    let name = object.objectForKey("def") as! String
+                    let b_name = object.objectForKey("back") as! String
+                    let id = object.objectId as! AnyObject
+                    let degrees = object.objectForKey("degree") as! String
+                    
+                    
+                    self.searchResults_front.append(name)
+                    self.searchResults_back.append(b_name)
+                    self.searchResult_id.append(id as! String)
+                    self.searchResult_degrees.append(degrees)
+                    
+                }
+            }
+            test = 0
+        }
+        if hello == 0{
+            self.Cardtext.text = self.searchResults_front[index]
             self.myLabel.text = self.searchResult_degrees[index]
             let defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
             degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
+        }
+        else{
+            index = searchResults_front.indexOf(startname)!
+            self.Cardtext.text = startname
+            self.myLabel.text = self.searchResult_degrees[index]
+            let defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
+            degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
+        }
         
         let rect = CGRectMake((view.frame.size.width-300)/4, 20, 300, 210)
         cardView = UIView(frame: rect)
@@ -88,16 +159,14 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         self.view.addSubview(cardView)
         let horizontalConstraint = NSLayoutConstraint(item: cardView, attribute: NSLayoutAttribute.RightMargin, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.LeftMargin, multiplier: 1, constant: 100)
         self.view.addConstraint(horizontalConstraint)
-//        let widthConstraint = NSLayoutConstraint(item: cardView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 350)
-//       self.view.addConstraint(widthConstraint)
-//        // view.addConstraint(widthConstraint) // also works
-//        
-//        let heightConstraint = NSLayoutConstraint(item: cardView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 200)
-//        self.view.addConstraint(heightConstraint)
-        // view.addConstraint(heightConstraint) // also works
         
         [self.view .insertSubview(textbox, aboveSubview: cardView)]
-        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("nextcalled"))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("previouscalled"))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeRight)
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,11 +177,11 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         if (showingBack) {
             UIView.transitionFromView(back, toView: front, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             showingBack = false
-            self.cardtext.text = self.searchResults_front[index]
+            self.Cardtext.text = self.searchResults_front[index]
         } else {
             UIView.transitionFromView(front, toView: back, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             showingBack = true
-            self.cardtext.text = self.searchResults_back[index]
+            self.Cardtext.text = self.searchResults_back[index]
         }
         
     }
@@ -120,26 +189,7 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     func nextcalled(){
         globalDegree = self.myLabel.text!
 
-
         helper()
-        
-//        let query = PFQuery(className: "Card")
-//        query.getObjectInBackgroundWithId(searchResult_id[index]){
-//            (cards: PFObject?, error: NSError?) -> Void in
-//            if error != nil{
-//                print(error)
-//            }else if let cards = cards{
-//                cards["degree"] = self.myLabel.text
-//                let alert = UIAlertView()
-//                alert.title = "No Text"
-//                alert.message = self.myLabel.text
-//                alert.addButtonWithTitle("OK")
-//                alert.show()
-//                cards.saveInBackground()
-//            }
-//        }
-    
-        
 
         if(showingBack){
             UIView.transitionFromView(back, toView: front, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
@@ -148,9 +198,45 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         if (index + 1 < searchResults_front.count){
             index++
         }
-        self.cardtext.text = self.searchResults_front[index]
+        else{
+            //obtain new cards
+            index = 0;
+            let c = currentmem.count;
+            if c < 5{
+                currentmem.append(degreePicker[c])
+            }
+            else{
+                currentmem.removeAll()
+                currentmem.append(degreePicker[0])
+            }
+            var c1 = currentmem.count
+            let query = PFQuery(className: "Card")
+            let currentuser = PFUser.currentUser()!.username
+            query.whereKey("userid", equalTo:currentuser!)
+            query.whereKey("foldername", equalTo:foldername)
+                query.whereKey("degree", equalTo: currentmem[c1-1])
+                let scoreArrary = query.findObjects()
+                for object in scoreArrary!{
+                    let name = object.objectForKey("def") as! String
+                    let b_name = object.objectForKey("back") as! String
+                    let id = object.objectId as! AnyObject
+                    let degrees = object.objectForKey("degree") as! String
+                    
+                    
+                    self.searchResults_front.append(name)
+                    self.searchResults_back.append(b_name)
+                    self.searchResult_id.append(id as! String)
+                    self.searchResult_degrees.append(degrees)
+            }
+            
+        }
+        
+        
+        
+        
+        self.Cardtext.text = self.searchResults_front[index]
         self.myLabel.text = self.searchResult_degrees[index]
-        var defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
+        let defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
         degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
     }
     
@@ -175,6 +261,30 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
         }
     }
     
+    func previouscalled(){
+        globalDegree = self.myLabel.text!
+        
+        
+        helper()
+
+        if(showingBack){
+            UIView.transitionFromView(back, toView: front, duration: 0.1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+            showingBack = false
+        }
+        if (index - 1 > 0){
+            index--
+        }
+        else{
+            index = searchResults_front.count - 1;
+        }
+        self.Cardtext.text = self.searchResults_front[index]
+        self.myLabel.text = self.searchResult_degrees[index]
+        var defaultRowIndex = degreePicker.indexOf(self.searchResult_degrees[index])
+        degree.selectRow(defaultRowIndex!, inComponent: 0, animated: true)
+    }
+    
+
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -192,7 +302,7 @@ class CardViewController: UIViewController, UIPickerViewDataSource,UIPickerViewD
     }
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        var titleData = degreePicker[row]
+        let titleData = degreePicker[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blueColor()])
         return myTitle
     }

@@ -15,6 +15,10 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
     var idResults=[String]()
     var foldername = String()
     var cardforshare = String()
+    var carddegree = [String]()
+    var checkornot:[Bool] = [Bool]()
+    let degreePicker = ["1 (brand new)","2","3","4","5 (expert)"]
+
     //let newSegueIdentifier = "Share Card View Controller1"
     @IBOutlet weak var StartButton: UIBarButtonItem!
     required init?(coder aDecoder: NSCoder) {
@@ -41,6 +45,8 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             let name = object1.objectForKey("def") as! String
             let id = String(object1.objectId) as String
             self.searchResults.append(name)
+            let d = object1.objectForKey("degree") as! String
+            self.carddegree.append(d)
             print(id)
             let index1 = id.startIndex.advancedBy(10)
             let substring1 = id.substringFromIndex(index1)
@@ -71,7 +77,16 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         
         myCell.textLabel!.text = searchResults[indexPath.row]
         myCell.textLabel!.adjustsFontSizeToFitWidth = true;
-        
+        if myCell.selected{
+            myCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            self.checkornot.append(true)
+
+        }
+        else{
+            myCell.accessoryType = UITableViewCellAccessoryType.None;
+            self.checkornot.append(false)
+
+        }
         return myCell
     }
 
@@ -117,6 +132,16 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             let detailViewController = ((segue.destinationViewController) as! CardViewController)
             detailViewController.foldername = foldername
             print(foldername)
+            for i in checkornot{
+                if i == true{
+                    let ind = checkornot.indexOf(i)!
+                    let a = searchResults[ind]
+                    detailViewController.startname = a;
+                    detailViewController.startdegree = carddegree[ind]
+                    print(carddegree[ind])
+                }
+            }
+            
         }
         if segue.identifier == "Share Card View Controller"
         {
@@ -125,12 +150,18 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
                 detailViewController.cardId = cardforshare
                 detailViewController.foldername = foldername
             }
-            //detailViewController.cardId = cardforshare
-            //detailViewController.foldername = foldername
-            print("test here!!!!")
-            print(detailViewController.foldername)
             
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let myCell = tableView.cellForRowAtIndexPath(indexPath)
+        for i in checkornot{
+            if i == true{
+                checkornot[checkornot.indexOf(i)!] = false;
+            }
+        }
+        self.checkornot[indexPath.row] = true;
     }
     /*
     // MARK: - Navigation
