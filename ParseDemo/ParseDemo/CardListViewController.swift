@@ -131,7 +131,18 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
         }
         
         move.backgroundColor = UIColor.purpleColor()
-        return [delete, share, move]
+        
+        let edit = UITableViewRowAction(style: .Normal, title: "Edit") { (action, indexPath) in
+            // share item at indexPath
+            self.cardforshare = self.idResults[indexPath.row]
+            let storyboard = UIStoryboard(name:"Main",bundle:nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("Edit Card View Controller") as! EditCardViewController
+            vc.cardId = self.idResults[indexPath.row]
+            self.presentViewController(vc,animated:true,completion:nil)
+        }
+        
+        //edit.backgroundColor = UIColor.greyColor()
+        return [delete, share, move, edit]
     }
 
     
@@ -165,6 +176,15 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             }
             
         }
+//        if segue.identifier == "Edit Card View Controller"
+//        {
+//            let detailViewController = ((segue.destinationViewController) as! EditCardViewController)
+//            if let cell = sender as? UITableViewCell, let indexPath = myTable.indexPathForCell(cell) {
+//                detailViewController.mycardid = cardforshare
+//            }
+//            
+//        }
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
