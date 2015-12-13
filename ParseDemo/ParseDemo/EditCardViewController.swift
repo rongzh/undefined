@@ -10,16 +10,15 @@ import UIKit
 import Parse
 
 class EditCardViewController: UIViewController,UITextFieldDelegate {
-    
+    var foldername = String()
     var cardId = ""
     @IBOutlet weak var BackText: UITextView!
     @IBAction func UpdateCard(sender: AnyObject) {
         updateCardHelperCalled()
-//        let storyboard = UIStoryboard(name:"Main",bundle:nil)
-//        let vc = storyboard.instantiateViewControllerWithIdentifier("CardList View Controller") as! CardListViewController
-//        //vc.foldername = self.foldername
-//        
-//        self.presentViewController(vc,animated:true,completion:nil)
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("CardListViewController") as! CardListViewController
+        vc.foldername = self.foldername;
+        self.presentViewController(vc,animated:true,completion:nil)
     }
     @IBOutlet weak var FrontText: UITextView!
     var folders = [String]()
@@ -55,10 +54,10 @@ class EditCardViewController: UIViewController,UITextFieldDelegate {
             }else if let cards = cards{
                 cards["def"] = self.FrontText.text
                 cards["back"] = self.BackText.text
-                let alert = UIAlertView()
-                alert.title = "Cards Updated"
-                alert.addButtonWithTitle("OK")
-                alert.show()
+                //let alert = UIAlertView()
+                //alert.title = "Cards Updated"
+                //alert.addButtonWithTitle("OK")
+                //alert.show()
                 cards.saveInBackground()
             }
         }
@@ -71,6 +70,15 @@ class EditCardViewController: UIViewController,UITextFieldDelegate {
     textField.resignFirstResponder()
     
     return true
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "CardListViewController10"
+        {
+            let detailViewController = ((segue.destinationViewController) as! CardListViewController)
+                detailViewController.foldername = foldername
+            
+        }
+
     }
     
     /*

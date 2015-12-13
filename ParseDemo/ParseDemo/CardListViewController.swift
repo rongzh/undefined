@@ -138,6 +138,7 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
             let storyboard = UIStoryboard(name:"Main",bundle:nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("Edit Card View Controller") as! EditCardViewController
             vc.cardId = self.idResults[indexPath.row]
+            vc.foldername = self.foldername;
             self.presentViewController(vc,animated:true,completion:nil)
         }
         
@@ -185,6 +186,37 @@ class CardListViewController: UIViewController,UITableViewDataSource, UITableVie
 //            
 //        }
 
+    }
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(animated)
+        searchResults.removeAll()
+        let currentuser = PFUser.currentUser()!.username
+        let query = PFQuery(className: "Card")
+        query.whereKey("userid", equalTo:currentuser!)
+        query.whereKey("foldername", equalTo: foldername)
+        
+        let scoreArrary = query.findObjects()
+        
+        
+        for object1 in scoreArrary!{
+            let name = object1.objectForKey("def") as! String
+            let id = String(object1.objectId) as String
+            self.searchResults.append(name)
+            let d = object1.objectForKey("degree") as! String
+            self.carddegree.append(d)
+            print(id)
+            let index1 = id.startIndex.advancedBy(10)
+            let substring1 = id.substringFromIndex(index1)
+            let index2 = substring1.startIndex.advancedBy(10)
+            let substring2 = substring1.substringToIndex(index2)
+            print(substring2)
+            self.idResults.append(substring2)
+            
+        }
+        if idResults.count == 0{
+            StartButton.enabled = false;
+        }
+        myTable.reloadData();
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

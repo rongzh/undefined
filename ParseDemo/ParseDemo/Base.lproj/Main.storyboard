@@ -129,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-TD-YXW">
-                                <rect key="frame" x="0.0" y="198" width="600" height="402"/>
+                                <rect key="frame" x="0.0" y="253" width="600" height="347"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -154,36 +154,50 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NC-U1-4Ct">
-                                <rect key="frame" x="550" y="48" width="30" height="30"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-TA-JZd">
+                                <rect key="frame" x="0.0" y="15" width="600" height="44"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <segue destination="1dR-rn-7Rw" kind="show" id="WQ1-9v-nB8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmX-N4-GvW">
-                                <rect key="frame" x="9" y="45" width="76" height="35"/>
+                                <items>
+                                    <navigationItem title="Friends" id="fRl-GH-eHp">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="C9G-cA-Ywo">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bmX-N4-GvW">
+                                                <rect key="frame" x="20" y="4" width="76" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <segue destination="9B6-J3-lPL" kind="show" id="zhG-Ng-6YK"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="s15-Uz-8j0">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6NC-U1-4Ct">
+                                                <rect key="frame" x="513" y="7" width="67" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="Add"/>
+                                                <connections>
+                                                    <segue destination="1dR-rn-7Rw" kind="show" id="WQ1-9v-nB8"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="5Gm-4r-Etz">
+                                <rect key="frame" x="152" y="88" width="132" height="128"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="9B6-J3-lPL" kind="show" id="zhG-Ng-6YK"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TgO-TD-YXW" secondAttribute="trailing" constant="10" id="1xY-ib-7sX"/>
-                            <constraint firstItem="TgO-TD-YXW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leadingMargin" constant="10" id="EKk-dP-ZyN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TgO-TD-YXW" secondAttribute="trailing" constant="10" id="NOB-aS-YC7"/>
-                            <constraint firstItem="bmX-N4-GvW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leadingMargin" id="PDb-lo-VVz"/>
-                            <constraint firstItem="6NC-U1-4Ct" firstAttribute="top" secondItem="bmX-N4-GvW" secondAttribute="top" id="ZVg-t4-eL6"/>
-                            <constraint firstItem="6NC-U1-4Ct" firstAttribute="trailing" secondItem="HnD-md-fsC" secondAttribute="trailingMargin" constant="10" id="Zbv-ef-pBj"/>
-                            <constraint firstAttribute="trailing" secondItem="TgO-TD-YXW" secondAttribute="trailing" id="gB5-vY-7Uq"/>
-                            <constraint firstItem="TgO-TD-YXW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leading" id="pCT-6w-qob"/>
+                            <constraint firstItem="TgO-TD-YXW" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leadingMargin" constant="-20" id="EDb-Uh-hSQ"/>
+                            <constraint firstItem="QpQ-TA-JZd" firstAttribute="leading" secondItem="HnD-md-fsC" secondAttribute="leadingMargin" constant="-20" id="Sc6-Dw-jdB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TgO-TD-YXW" secondAttribute="trailing" constant="-20" id="dTe-19-duY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QpQ-TA-JZd" secondAttribute="trailing" constant="-20" id="kaS-Gq-AsQ"/>
                             <constraint firstItem="VCw-O3-q1X" firstAttribute="top" secondItem="TgO-TD-YXW" secondAttribute="bottom" id="tWF-sj-q8f"/>
                         </constraints>
                     </view>
@@ -790,7 +804,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-8y-DPK">
-                                <rect key="frame" x="63" y="154" width="203" height="101"/>
+                                <rect key="frame" x="89" y="154" width="203" height="101"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fc1-GZ-Zna">
                                         <rect key="frame" x="8" y="4" width="188" height="93"/>
@@ -1371,7 +1385,7 @@
                                 <animations/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="bLu-Dq-gfP" kind="show" id="zK5-4C-6q0"/>
+                                    <segue destination="bLu-Dq-gfP" kind="show" identifier="CardListViewController10" id="zK5-4C-6q0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiD-Bs-ytZ">
@@ -1423,10 +1437,10 @@
         <image name="user" width="126" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iCI-tb-35v"/>
-        <segue reference="hmo-IP-AcU"/>
+        <segue reference="zhG-Ng-6YK"/>
+        <segue reference="67G-tT-4Tt"/>
+        <segue reference="pVD-f6-5FO"/>
         <segue reference="zK5-4C-6q0"/>
         <segue reference="v7M-w6-WIw"/>
-        <segue reference="67G-tT-4Tt"/>
     </inferredMetricsTieBreakers>
 </document>
